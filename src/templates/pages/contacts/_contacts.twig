@@ -1,0 +1,89 @@
+<div class="contacts">
+    <div class="container">
+        <div class="contacts__wrapper">
+            {{ titles.title("For Immediate Questions", "contacts", "xs", "dark", "h1") }}
+
+            <div class="contacts__list">
+                <ul class="contacts-list">
+                    <li class="contacts-list__item contacts-item">
+                        <div class="contacts-item__name">
+                            Customer Service
+                        </div>
+                        <div class="contacts-item__content content">
+                            <a class="content__inner" href="mailto:info@huedivision.com">info@huedivision.com</a>
+                        </div>
+                    </li>
+                    <li class="contacts-list__item contacts-item">
+                        <div class="contacts-item__name">
+                            Phone
+                        </div>
+                        <div class="contacts-item__content">
+                            <a class="content__inner" href="tel:+1(212)6004132"> +1 (212) 600 4132</a>
+                        </div>
+                    </li>
+                    <li class="contacts-list__item contacts-item">
+                        <div class="contacts-item__name">
+                            Opening hours
+                        </div>
+                        <div class="contacts-item__content">
+                            <span class="content__inner">
+                                Monday-Friday<br/>
+                            from 9am-5:30pm EST
+                            </span>
+                        </div>
+                    </li>
+                    <li class="contacts-list__item contacts-item">
+                        <div class="contacts-item__name">
+                            Address
+                        </div>
+                        <div class="contacts-item__content">
+                            <span class="content__inner">
+                                57 West 38th Street,<br/>
+                            7th Floor New York,<br/>
+                            NY 10018
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts__form">
+                <form action="" class="form-theme form-theme--contacts form-valid">
+{#                    has-error#}
+                    <div class="form-theme__item form-theme__field">
+                        <div class="field-wrap">
+                            <label for="name">Your Name</label>
+                            <input id="name" type="text" data-input="text" class="input-required">
+                        </div>
+                        <span class="txt-error">Please enter at least 3 characters</span>
+                    </div>
+                    <div class="form-theme__item form-theme__field">
+                        <div class="field-wrap">
+                            <label for="email">Your Email</label>
+                            <input id="email" type="email" data-input="email" class="input-required">
+                        </div>
+                        <span class="txt-error">It looks like you haven’t entered a valid email address - please try again</span>
+                    </div>
+                    <div class="form-theme__item form-theme__field">
+                        <div class="field-wrap">
+                            <label for="phone">Your Phone Number</label>
+                            <input id="phone" type="number" data-input="phone" class="input-required">
+                        </div>
+                        <span class="txt-error">Please enter at least 8 characters</span>
+                    </div>
+                    <div class="form-theme__item form-theme__field">
+                        <div class="field-wrap">
+                            <label for="message">Your Message</label>
+                            <textarea id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-theme__item form-theme__button">
+                        <button type="submit" class="button button--black">
+                            <span data-splitting>send message</span>
+                            <span data-splitting>send message</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

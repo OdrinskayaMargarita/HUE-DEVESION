@@ -1,0 +1,29 @@
+.tag {
+  display: flex;
+  height: fit-content;
+  color: $c-white;
+
+  &--default {
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: capitalize;
+    background-color: $c-black;
+  }
+
+  &--sale {
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: $c-sale;
+  }
+}
+
+div.tag {
+  width: auto;
+  justify-self: flex-start;
+}
+
+

@@ -1,0 +1,18 @@
+{% import "data/_data-products.twig" as dataProducts %}
+{% import "blocks/_product-card.twig" as productCard %}
+
+<section class="might-like">
+    <div class="container container--s">
+        <div class="might-like__wrapper">
+            {{ titles.title("We think you might like", "hero", "s", "", "h4") }}
+
+            <div class="might-like__inner js-catalog-products">
+                {% for item in dataProducts.products %}
+                    {% if loop.index < 5 %}
+                        {{ productCard.product('might-like__item is-small', item) }}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

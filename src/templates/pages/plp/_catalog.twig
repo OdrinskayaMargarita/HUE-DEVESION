@@ -1,0 +1,53 @@
+{% import "data/_data-products.twig" as dataProducts %}
+{% import "blocks/_product-card.twig" as productCard %}
+
+<section class="plp_catalog">
+    <div class="container container--s">
+        <div class="plp_catalog__title">
+            {{ titles.title("Women", "hero", "l", "", "h1") }}
+            <span>37</span>
+        </div>
+        <div class="plp_catalog__all">
+            <div class="catalog__filter">
+                <ul class="catalog__filter__type">
+                    <li><a href="javascript:void(0)" class="type-clothes filter__type--active">All</a></li>
+                    <li><a href="javascript:void(0)" class="type-clothes">hoodies</a></li>
+                    <li><a href="javascript:void(0)" class="type-clothes">shorts</a></li>
+                    <li><a href="javascript:void(0)" class="type-clothes">sweatshirts</a></li>
+                    <li><a href="javascript:void(0)" class="type-clothes">t-shirts</a></li>
+                    <li><a href="javascript:void(0)" class="type-clothes">track pants</a></li>
+                </ul>
+                <ul class="catalog__filter--sort">
+                    <li>
+                        <button type="button" role="button" aria-label="Filter" id="catalog-filter--open">
+                            Filter
+                            <span class="js-allFilters-count"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" role="button" aria-label="Sort by" id="catalog-sort--open">
+                            Sort By
+                            <span>(1)</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="catalog__filter--view view">
+                    <p class="view__item">View</p>
+                    <button type="button" role="button" aria-label="Change mode to 2"
+                            class="view__item view__button js-view" data-className="has-view2">2</button>
+                    <button type="button" role="button" aria-label="Change mode to 4"
+                            class="view__item view__button js-view" data-className="has-view4">4</button>
+                </div>
+            </div>
+            <div class="catalog__products catalog-products js-catalog-products">
+                {% for item in dataProducts.products %}
+                    {{ productCard.product('catalog-products__item', item) }}
+                {% endfor %}
+            </div>
+
+            <div class="catalog__pagination">
+                {% include "blocks/_pagination.twig" %}
+            </div>
+        </div>
+    </div>
+</section>

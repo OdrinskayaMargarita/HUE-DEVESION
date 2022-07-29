@@ -1,0 +1,24 @@
+---
+title: PDP
+description: Template
+pageName: pdpPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_media.twig" as media %}
+
+{% block otherStyles %}
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+{% endblock %}
+
+{% block content %}
+    <main>
+        {% include "pages/pdp/_hero.twig" %}
+        {% include "pages/pdp/_pdp-tabs.twig" %}
+        {% include "blocks/_might-like.twig" %}
+        {{ media.mediaBlock('Media', data.media) }}
+        {% include "pages/pdp/_pdp-modal.twig" %}
+        {% include "pages/pdp/_sizes-modal.twig" %}
+        {% include "./pages/plp/_catalog-modal.twig" %}
+    </main>
+{% endblock %}

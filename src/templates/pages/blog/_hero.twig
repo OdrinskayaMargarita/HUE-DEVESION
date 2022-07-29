@@ -1,0 +1,13 @@
+<section class="blog-hero">
+    <div class="blog-hero__wrapper">
+        {% for item in data.mediaPageHero %}
+            <div class="blog-hero__img blog-hero__img--{{ loop.index }}">
+                <div class="media-wrap">
+                    <img src="img/blogpage/hero/{{ item.src }}" alt="{{ item.name }}">
+                </div>
+            </div>
+        {% endfor %}
+
+        {{ titles.title("Media", "blog-hero", "l", "dark", "h1") }}
+    </div>
+</section>

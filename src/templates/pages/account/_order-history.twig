@@ -1,0 +1,105 @@
+<div class="account__order-history order-history">
+    <div class="order-history__content">
+        <div class="account__subtitle">
+            Order History
+        </div>
+        {# IF we haven't orders #}
+{#        <div class="order-history__empty orders-empty">#}
+{#            <p class="order-history__text orders-empty__text">#}
+{#                You haven't placed any orders yet.#}
+{#            </p>#}
+{#            <div class="orders-empty__button">#}
+{#                <a href="/plp.html" class="button button--black" data-splitting>#}
+{#                    shop now#}
+{#                </a>#}
+{#            </div>#}
+{#        </div>#}
+        {# ENDIF we haven't orders #}
+
+        {# IF we have some orders #}
+        <div class="order-history__full orders-full">
+            <div class="orders-full__list">
+                <ul class="orders-list js-dropdown-wrap">
+                    {% for item in dataAccount.orders %}
+                        <li class="orders-list__item order" data-dropdown-container>
+                            <button type="button" role="button" aria-label="open"
+                                    class="order__name order__subtitle js-hovered" data-dropdown-button>
+                                <span class="name">
+                                    Order nr #{% if loop.index < 10 %}0{% endif %}{{ loop.index }}
+                                </span>
+                                <span class="icon icon_plus">+</span>
+                                <span class="icon icon_minus">-</span>
+                            </button>
+                            <div class="order__content" data-dropdown>
+                                <div class="order__inner order-inner" data-dropdown-inner>
+                                    <div class="order-inner__products order-products">
+                                        <p class="order-products__name order__subtitle">
+                                            Products
+                                        </p>
+                                        <div class="order-products__list">
+                                            <ul class="products-list">
+                                                {% for product in item.products %}
+                                                    <li class="products-list__item product">
+                                                        <a href="{{ product.href }}" class="product__thumb">
+                                                            <img src="img/accountpage/{{ product.src }}"
+                                                                 alt="{{ product.name }}">
+                                                        </a>
+                                                        <h3 class="product__name order__text">
+                                                            <a href="{{ product.href }}">
+                                                                {{ product.name }}
+                                                            </a>
+                                                        </h3>
+                                                        <div class="product__quantity">Qty: <span class="order__number">{{ product.quantity }}</span></div>
+                                                        <div class="product__price order__number">${{ product.price + '.' + '00'}}</div>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                            <div class="order-products__list-total order__text">
+                                                {% set sum = 0 %}
+                                                {% set loopOutput %}
+                                                    {% for product in item.products %}
+                                                        {% set sum = sum + product.price %}
+                                                    {% endfor %}
+                                                {% endset %}
+                                                Total: <span class="order__number">${{ sum + '.' + '00' }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-inner__address order-address">
+                                        <p class="order-address__name order__subtitle">
+                                            Address
+                                        </p>
+                                        {% set orderAddress = item.orderAddress %}
+                                        <div class="order-address__address address order__text">
+                                            <p class="address__item">
+                                                {{ orderAddress.name.first }} {{ orderAddress.name.last }}
+                                            </p>
+                                            <p class="address__item">
+                                                {{ orderAddress.address }}
+                                            </p>
+                                            <p class="address__item">
+                                                {{ orderAddress.city.code }} {{ orderAddress.city.name }}
+                                            </p>
+                                            <p class="address__item">
+                                                {{ orderAddress.country }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="order-inner__status order-status">
+                                        <p class="order-status__name order__subtitle">
+                                            Status
+                                        </p>
+                                        <p class="order-status__content order__text">
+                                            {{ item.status }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {# ENDIF we have some orders #}
+    </div>
+</div>

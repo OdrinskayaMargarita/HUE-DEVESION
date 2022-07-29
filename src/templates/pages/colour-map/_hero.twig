@@ -1,0 +1,28 @@
+<section class="map-hero" style="--color: {{ dataMap.hero.bg }};">
+    <div class="map-hero__wrapper">
+        <div class="map-hero__img">
+            <picture>
+                {% set images = dataMap.hero.images %}
+                {% if images.srcMob %}
+                    <source media="(max-width: 767px)" srcset="{{'img/color-map/' + images.srcMob }}">
+                {% endif %}
+                {% if images.srcTab %}
+                    <source media="(min-width: 768px) and (max-width: 1199px)" srcset="{{ 'img/color-map/' + images.srcTab }}">
+                {% endif %}
+                {% if images.srcDesk %}
+                    <source media="(min-width: 1200px)" srcset="{{ 'img/color-map/' + images.srcDesk }}">
+                {% endif %}
+                <img src="{{ 'img/colour-map/' + images.srcDesk }}" alt="{{ dataMap.hero.title }}">
+            </picture>
+        </div>
+        <div class="map-hero__content">
+            <div class="container">
+                {{ titles.title(dataMap.hero.title, "map-hero", "l", "light", "h1") }}
+                <div class="map-hero__text text-wrap">
+                    {{ dataMap.hero.text | safe }}
+                </div>
+                {{ scroll.scrollToMap('white') }}
+            </div>
+        </div>
+    </div>
+</section>

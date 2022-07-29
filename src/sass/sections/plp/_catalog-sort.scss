@@ -1,0 +1,142 @@
+.catalog-sort {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 505;
+  opacity: 1;
+  transform: translate(200%, 0);
+  transition: transform 500ms ease;
+  max-width: 485px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  padding: 45px 65px;
+  overflow-y: auto;
+
+  @include mobile {
+    padding: 65px 25px;
+  }
+
+  &--open {
+    transform: translate(0, 0);
+  }
+
+  &__form {
+    height: calc(100% - 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+    }
+
+    .icon_close{
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__list {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      label {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        opacity: 0.5;
+      }
+    }
+
+    input[type="radio"] {
+      -webkit-appearance: none;
+      min-width: 17px;
+      width: 17px;
+      height: 17px;
+      min-height: 17px;
+      border: 1px solid transparent;
+      outline: none;
+      margin-right: 25px;
+      box-sizing: border-box;
+      background: #FFFFFF;
+    }
+
+    input[type="radio"]:checked {
+      border: 1px solid $c-black;
+      background: $c-black;
+    }
+
+    input[type="radio"]:checked:before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 10px;
+      border: 1px solid #fff;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotateZ(45deg);
+      margin: 1px 5px;
+    }
+  }
+
+  &--apply {
+    &-filter {
+      &.button--black {
+        &:hover {
+          &:before {
+            width: 51%;
+          }
+        }
+      }
+    }
+    &-sort{
+      &.button--black {
+        .char{
+          transition: 500ms;
+        }
+        &:hover {
+          &:before {
+            width: 52%;
+          }
+          .char{
+            &:nth-child(1),
+            &:nth-child(2){
+              color: $c-black;
+            }
+          }
+        }
+      }
+    }
+    &-filter{
+      &.button--black{
+        .word{
+          transition: 500ms;
+        }
+        &:hover{
+          .word{
+            &:first-of-type{
+              color: $c-black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

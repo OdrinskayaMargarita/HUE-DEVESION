@@ -1,0 +1,20 @@
+---
+title: Process
+description: Template
+pageName: processPage
+---
+{% import "data/_data-about.twig" as dataAbout %}
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_inner-hero.twig" as hero %}
+
+{% block otherStyles %}
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+{% endblock %}
+
+{% block content %}
+    <main>
+        {{ hero.innerHero("OUr Process", "#866DD5", "img/process/process.jpg", "img/process/process.jpg") }}
+        {% include "pages/process/_process-content.twig" %}
+    </main>
+{% endblock %}

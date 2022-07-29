@@ -1,0 +1,141 @@
+.lookbook {
+  padding: 55px 0 82px;
+
+  @include tablet {
+    padding: 110px 0 80px;
+  }
+
+  @include mobile {
+    padding: 100px 0 95px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 auto .95em;
+    max-width: 731px;
+    text-align: center;
+
+    @include tablet {
+      max-width: 534px;
+    }
+  }
+
+  &__slider {
+    margin: 0 -75px 45px;
+
+    @include tablet {
+      margin: 0 -45px;
+    }
+
+    @include mobile {
+      margin: 0 -25px;
+    }
+  }
+
+  &__link {
+    margin: 0 auto;
+
+    @include tablet {
+      margin: 45px auto 0;
+    }
+  }
+
+  // swiper
+  .slider {
+    height: 34.03vw;
+
+    @include tablet-plus {
+      height: 59.47vw;
+    }
+
+    @include mobile {
+      height: 72.27vw;
+    }
+  }
+
+  .slide {
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    &:not(.swiper-slide-active) {
+      .slide__img {
+        opacity: .5;
+        width: 100%;
+        height: 23.9854vw;
+
+        @include tablet-plus {
+          height: 41.41vw;
+        }
+
+        @include mobile {
+          height: 42.93vw;
+        }
+      }
+    }
+
+    &.swiper-slide-active {
+      justify-content: center;
+
+      .slide__img {
+        width: 100%;
+        min-width: 26.12vw;
+        height: 34.03vw;
+        pointer-events: none;
+
+        @include tablet-plus {
+          min-width: unset;
+          height: 59.47vw;
+        }
+
+        @include mobile {
+          height: 72.27vw;
+        }
+      }
+    }
+
+    &.swiper-slide-prev {
+      .slide__img {
+        padding-right: 17.5%;
+
+        @include mobile {
+          padding-right: 15%;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    &.swiper-slide-next {
+      .slide__img {
+        padding-left: 17.5%;
+
+        @include mobile {
+          padding-left: 15%;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    &__img {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: padding-right 500ms ease, padding-left 500ms ease, opacity 700ms ease,
+      width 800ms ease, height 800ms ease;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

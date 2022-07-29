@@ -1,0 +1,392 @@
+{% set sidebar = [
+    {
+        name: 'Addresses',
+        href: '/account-addresses.html'
+    },
+    {
+        name: 'Order history',
+        href: '/account-order-history.html'
+    },
+    {
+        name: 'Wish list',
+        href: '/account-wishlist.html'
+    }
+] %}
+
+{% set addresses = [
+    {
+        name: {
+        first: 'Barbara',
+        last: 'Skrodzka'
+    },
+        company: 'Barbara',
+        address: 'Via Laietana 57 3-1',
+        city: {
+        code: '08003',
+        name: 'Barcelona'
+    },
+        country: 'Spain',
+        phone: '0800308003'
+    },
+    {
+        state: '',
+        name: {
+        first: 'Barbara',
+        last: 'Skrodzka'
+    },
+        address: 'Via Laietana 57 3-1',
+        city: {
+        code: '08003',
+        name: 'Barcelona'
+    },
+        country: 'Spain',
+        phone: '0800308003'
+    },
+    {
+        state: 'default',
+        name: {
+        first: 'Barbara',
+        last: 'Skrodzka'
+    },
+        address: 'Via Laietana 57 3-1',
+        city: {
+        code: '08003',
+        name: 'Barcelona'
+    },
+        country: 'Spain',
+        phone: '0800308003'
+    }
+] %}
+
+{% set orders = [
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    },
+    {
+        products: [
+            {
+                href: '#',
+                src: 'order-1.jpg',
+                name: 'lluminating Yellow Organic & Recycled Cotton Hoodie...',
+                quantity: 1,
+                price: 149.00
+            },
+            {
+                href: '#',
+                src: 'order-2.jpg',
+                name: 'Classics blue unisex organic & recycled cotton sweatpants',
+                quantity: 1,
+                price: 149.00
+            }
+        ],
+        total: '298',
+        orderAddress: {
+            name: {
+                first: 'Barbara',
+                last: 'Skrodzka'
+            },
+            address: 'Via Laietana 57 3-1',
+            code: '08003',
+            city: {
+                code: '08003',
+                name: 'Barcelona'
+            },
+            country: 'Spain'
+        },
+        status: 'Confirmed'
+    }
+] %}

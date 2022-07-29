@@ -1,0 +1,29 @@
+---
+title: Home
+description: Template
+pageName: homePage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_media.twig" as media %}
+
+{% block otherStyles %}
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+{% endblock %}
+
+{% block content %}
+{#  todo delete before prod, uncomment in layout #}
+  {% include "blocks/_loader.twig" %}
+
+  <main>
+    {% include "pages/home/_hero.twig" %}
+    {% include "pages/home/_new-arrivals.twig" %}
+    {% include "blocks/_terms-banners.twig" %}
+    {% include "pages/home/_discover.twig" %}
+    {% include "pages/home/_choose-collection.twig" %}
+    {% include "pages/home/_lookbook.twig" %}
+    {% include "blocks/_why-us.twig" %}
+    {{ media.mediaBlock('Media', data.media) }}
+    {% include "blocks/_insta.twig" %}
+  </main>
+{% endblock %}

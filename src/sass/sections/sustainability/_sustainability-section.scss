@@ -1,0 +1,405 @@
+.section-item {
+  $this: &;
+
+  &.has-text-left {
+    #{$this}__content {
+      grid-column: 1/2;
+
+      .content-wrap {
+        margin-left: auto;
+        margin-right: auto;
+
+        @include laptop-plus {
+          margin-left: 10px;
+        }
+
+        @include laptop {
+          margin-right: 30px;
+        }
+
+        @include tablet-plus {
+          margin: 0;
+        }
+      }
+    }
+
+    #{$this}__media {
+      grid-column: 2/3;
+      margin-right: -75px;
+
+      @include tablet-plus {
+        grid-column: 1/2;
+        margin-right: -75px;
+        margin-left: -75px;
+      }
+
+      @include tablet {
+        margin-right: -45px;
+        margin-left: -45px;
+      }
+
+      @include mobile {
+        margin-right: -25px;
+        margin-left: -25px;
+      }
+    }
+  }
+
+  &.has-text-right {
+    #{$this}__content {
+      .content-wrap {
+        margin-left: auto;
+        margin-right: auto;
+
+        @include laptop-plus {
+          margin-right: 10px;
+        }
+
+        @include laptop {
+          //margin-right: 10px;
+          //margin-left: 30px;
+        }
+
+        @include tablet-plus {
+          margin: 0;
+        }
+      }
+    }
+
+    #{$this}__media {
+      margin-left: -75px;
+
+      @include tablet-plus {
+        margin-right: -75px;
+        margin-left: -75px;
+      }
+
+      @include tablet {
+        margin-right: -45px;
+        margin-left: -45px;
+      }
+
+      @include mobile {
+        margin-right: -25px;
+        margin-left: -25px;
+      }
+    }
+  }
+
+  &--organic-cotton {
+    &:nth-of-type(2) {
+      #{$this}__content {
+        .content-wrap {
+          //margin: auto;
+          //max-width: 519px;
+          //
+          //@include laptop-plus {
+          //  margin-right: 10px;
+          //}
+          //
+          //@include laptop {
+          //  max-width: 36.04vw;
+          //}
+
+          //max-width: 413px;
+          //
+          //@include laptop {
+          //  max-width: 28.68vw;
+          //}
+
+          @include tablet-plus {
+            max-width: unset;
+          }
+
+          .text-wrap {
+            padding-right: 106px;
+
+            @include laptop-plus {
+              padding-right: 7.362vw;
+            }
+
+            @include tablet-plus {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      #{$this}__content {
+        .content-wrap {
+          margin: auto;
+          max-width: 401px;
+
+          @include tablet-plus {
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
+
+  &--reusable-packaging {
+    &:last-of-type {
+      #{$this}__content {
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include tablet-plus {
+          padding-right: 0;
+        }
+
+        .content-wrap {
+          display: flex;
+          flex-direction: column-reverse;
+          margin: auto;
+          max-width: 507px;
+
+          @include tablet-plus {
+            max-width: 338px;
+          }
+        }
+      }
+    }
+  }
+
+  &--recycled-cotton {
+    &.has-text-right {
+      #{$this}__content {
+        opacity: .7;
+      }
+    }
+  }
+
+  &.has-colored-bg {
+    background-color: var(--bg);
+
+    #{$this}__content {
+      color: $c-white;
+
+      .text-wrap {
+        p,
+        li {
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: .05em;
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  &.has-media-full {
+    .media-wrap {
+      width: 100%;
+      height: 0;
+      padding-bottom: 130.556%;
+
+      @include tablet-plus {
+        padding-bottom: 77.938%;
+      }
+
+      @include mobile {
+        padding-bottom: 130.136%;
+      }
+    }
+  }
+
+  &.has-media-partial {
+    &.section-item--organic-cotton:first-of-type {
+      .media-wrap {
+        @include tablet-plus {
+          margin: 155.99px auto;
+        }
+
+        @include mobile {
+          margin: 65px auto;
+        }
+      }
+    }
+
+    &.section-item--recycled-cotton {
+      .media-wrap {
+        @include tablet-plus {
+          margin: 117.33px auto;
+        }
+
+        @include mobile {
+          margin: 65px auto;
+        }
+      }
+    }
+
+    .media-wrap {
+      margin: 122.5px auto;
+      width: 36.1112vw;
+      height: 0;
+      padding-bottom: 95.695%;
+
+      @include tablet-plus {
+        margin: 100px auto;
+        width: 70.26vw;
+        padding-bottom: 53.957%;
+      }
+
+      @include mobile {
+        margin: 65px auto;
+        width: 72.425vw;
+        padding-bottom: 86.507%;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet-plus {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__content,
+  &__media {
+    grid-row: 1/2;
+  }
+
+  &__media {
+    background-color: var(--bgMedia);
+
+    @include tablet-plus {
+      grid-row: 2/3;
+    }
+  }
+
+  &__content {
+    margin: 122.5px 0;
+    width: 100%;
+    display: flex;
+    color: $c-black;
+
+    @include tablet-plus {
+      margin: 100px 80px;
+      width: auto;
+    }
+
+    @include mobile {
+      margin: 100px 0;
+    }
+
+    .content-wrap {
+      margin: auto 0;
+      max-width: 519px;
+
+      @include laptop {
+        max-width: 36.04vw;
+      }
+
+      @include tablet-plus {
+        max-width: unset;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @media (max-width: 1279px) and (min-width: 1200px) {
+      font-size: 45px;
+    }
+
+    #friendly-dyes & {
+      @include mobile{
+        font-size: 29px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 100%;
+
+    &.text-wrap {
+      ol,
+      ul {
+        margin-top: 20px;
+      }
+
+      h3,
+      h4 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      h5,
+      h6 {
+        margin-top: 30px;
+        margin-bottom: 5px;
+      }
+
+      & > * {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__content-img {
+    margin-bottom: 10px;
+    max-width: 180px;
+  }
+
+  &__icon {
+    .icon {
+      stroke: currentColor;
+      stroke-width: 3px;
+
+      &:not(.icon_eco) {
+        margin-bottom: 30px;
+      }
+
+      &.icon_organic-cotton {
+        width: 120px;
+        height: 97px;
+      }
+
+      &.icon_recycled-cotton {
+        width: 80.74px;
+        height: 97.5px;
+      }
+
+      &.icon_friendly-dyes {
+        width: 91px;
+        height: 97px;
+      }
+
+      &.icon_reusable-packaging {
+        width: 109px;
+        height: 101px;
+      }
+
+      &.icon_eco {
+        margin-top: 50px;
+        width: 135.41px;
+        height: 123.63px;
+      }
+
+      &.icon_oeko {
+        margin-bottom: 10px;
+        width: 324px;
+        height: 128px;
+        fill: #0A0A0A;
+        stroke: transparent;
+
+        @include tablet-plus {
+          width: 262px;
+          height: 103.51px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<div class="basket-menu" id="basket-menu">
+    <button type="button" role="button" aria-label="Close" id="basket-menu--close" class="basket-menu--close">
+        {{ icons.icon('close') }}
+    </button>
+    <p class="basket-menu--title">My Cart
+    <div class="basket-menu__inner">
+        <div class="basket__list--item">
+            <a href="#" class="basket__list--img"><img src="/img/clothes1.jpg"></a>
+            <a href="#" class="basket__list--title">Classics blue unisex organic & recycled cotton
+                sweatpants</a>
+            <p class="basket__list--price"><span>Unit Price</span>$149.00</p>
+            <div class="catalog__modal--count">
+                <span id="catalog__modal--minus" class="catalog__modal--minus js-hovered">-</span>
+                <input type="number" value="1" id="catalog__modal--input" class="catalog__modal--input">
+                <span id="catalog__modal--plus" class="catalog__modal--plus js-hovered">+</span>
+            </div>
+            <p class="basket__list--price"><span>Total</span>$149.00</p>
+            <button class="basket__list--item-delete">
+                {{ icons.icon('close') }}
+            </button>
+        </div>
+        <div class="basket__list--item">
+            <a href="#" class="basket__list--img"><img src="img/pdp/pdp2.png"></a>
+            <a href="#" class="basket__list--title">Illuminating Yellow Organic & Recycled Cotton Hoodie
+                1 / XS / Illuminating Yellow</a>
+            <p class="basket__list--price"><span>Unit Price</span>$149.00</p>
+            <div class="catalog__modal--count">
+                <span id="catalog__modal--minus" class="catalog__modal--minus js-hovered">-</span>
+                <input type="number" value="1" id="catalog__modal--input" class="catalog__modal--input">
+                <span id="catalog__modal--plus" class="catalog__modal--plus js-hovered">+</span>
+            </div>
+            <p class="basket__list--price"><span>Total</span>$149.00</p>
+            <button class="basket__list--item-delete">
+                {{ icons.icon('close') }}
+            </button>
+        </div>
+    </div>
+    <div class="basket-menu__buttons">
+        <div class="basket-menu__subtotal subtotal">
+            <p class="subtotal__txt">Sub Total</p>
+            <p class="subtotal__price">$149.00</p>
+        </div>
+        <button class="button--black">
+            <span data-splitting>Checkout</span>
+            <span data-splitting>Checkout</span>
+        </button>
+        <button class="button--white button--white-bordered">
+            <span data-splitting>view Cart</span>
+            <span data-splitting>view Cart</span>
+        </button>
+        <div class="basket-menu--continue">
+            <a href="#">
+                {{ icons.icon('shop') }}
+                Continue shopping
+            </a>
+        </div>
+    </div>
+</div>

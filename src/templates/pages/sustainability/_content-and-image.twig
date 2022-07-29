@@ -1,0 +1,67 @@
+{% import "mixins/_titles.twig" as titles %}
+{% import "mixins/_icons.twig" as icons %}
+
+{% macro contentAndImage(item, className, src, alt, modal) %}
+    <div class="sustainability-section__item section-item section-item--{{ className }}
+        {% if item.mode == 'left' %}has-text-left{% else %}has-text-right{% endif %} {% if item.bg %}has-colored-bg{% endif %} {% if item.mediaWidth %}has-media-{{ item.mediaWidth }}{% endif %}"
+             style="{% if item.bg %}--bg:{{ item.bg }};{% endif %}
+                     {% if item.bgMedia %}--bgMedia:{{ item.bgMedia }};{% endif %}">
+        <div class="container">
+            <div class="section-item__wrapper">
+                <div class="section-item__media">
+                    <div class="media-wrap has-fullscreen">
+                        {# IF we have an image #}
+                        {% if item.img %}
+                            <img src="{{ src }}{{ item.img }}" alt="{{ item.alt }}">
+                        {% endif %}
+                        {# ENDIF we have an image #}
+
+                        {# IF video is embed from vimeo #}
+                        {% if item.frame %}
+                            <div class="plyr__video-embed js-player" data-plyr-provider="vimeo"
+                                 data-plyr-embed-id="{{item.frame}}"></div>
+                            <button type="button" class="plyr__fullscreen js-fullscreen"  data-modalVideo="{{ 'modal-' + modal }}"
+                                    aria-label="Fullscreen">
+                                {{ icons.icon('expand') }}
+                            </button>
+                        {% endif %}
+                        {# ENDIF video is embed from vimeo #}
+
+                        {# IF video is embed as file #}
+                        {% if item.video %}
+                            <video class="plyr__video js-player" playsinline controls>
+                                <source src="{{ item.video }}.mp4" type="video/mp4"/>
+                                <source src="{{ item.video }}.webm" type="video/webm"/>
+                            </video>
+                            <button type="button" class="plyr__fullscreen js-fullscreen" data-modalVideo="{{ 'modal-' + modal }}"
+                                    aria-label="Fullscreen">
+                                {{ icons.icon('expand') }}
+                            </button>
+                        {% endif %}
+                        {# ENDIF video is embed as file #}
+                    </div>
+                </div>
+                <div class="section-item__content">
+                    <div class="content-wrap">
+                        {% if item.icon %}
+                            <div class="section-item__icon">
+                                {{ icons.icon(item.icon) }}
+                            </div>
+                        {% endif %}
+                        {% if item.contentImg %}
+                            <div class="section-item__content-img">
+                                <img src="{{ src }}{{ item.contentImg }}" alt="{{ item.alt }}">
+                            </div>
+                        {% endif %}
+                        {% if item.title %}
+                            {{ titles.title(item.title, "section-item", "xs", "dark", "h2") }}
+                        {% endif %}
+                        <div class="section-item__text text-wrap">
+                            {{ item.content | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,11 @@
+{% macro image(srcMob, srcDesk, alt) %}
+    <picture>
+        {% if srcMob %}
+            <source media="(max-width: 1199px)" srcset="{{ srcMob }}">
+            <source media="(min-width: 1200px)" srcset="{{ srcDesk }}">
+        {% else %}
+            <source srcset="{{ srcDesk }}">
+        {% endif %}
+        <img src="{{ srcDesk }}" alt="{{ alt }}">
+    </picture>
+{% endmacro %}

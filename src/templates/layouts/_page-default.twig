@@ -1,0 +1,39 @@
+{% import "data/_data.twig" as data %}
+
+{% import "mixins/_buttons.twig" as button %}
+{% import "mixins/_titles.twig" as titles %}
+{% import "mixins/_adaptive-images.twig" as images %}
+{% import "mixins/_icons.twig" as icons %}
+{% import "mixins/_radio.twig" as radio %}
+
+<!doctype html>
+<html lang="en">
+
+{% block otherStyles %}{% endblock %}
+{% include "./_head.twig" %}
+
+<body data-page-name="{{ pageName }}" id="body" class="body">
+
+{# {% include "blocks/_loader.twig" %} #}
+
+{% include "blocks/_header.twig" %}
+{% include "blocks/_basketMenu.twig" %}
+
+{% block content %}{% endblock %}
+
+{% include "blocks/_subscribe.twig" %}
+{% include "blocks/_footer.twig" %}
+
+{# {% include "blocks/_svg-defs.twig" %} #}
+
+<div class="cursor js-cursor">
+        {% for item in data.cursorColors %}
+                <div class="cursor__item circle" style="border-color: {{ item }}"></div>
+        {% endfor %}
+</div>
+
+{% block otherScripts %}{% endblock %}
+<script src="/js/app.js"></script>
+
+</body>
+</html>

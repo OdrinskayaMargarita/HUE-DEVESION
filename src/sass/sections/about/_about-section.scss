@@ -1,0 +1,244 @@
+.about-section {
+  $this: &;
+
+  &.has-text-left {
+    #{$this}__content {
+      grid-column: 1/2;
+      margin-right: auto;
+
+      @include tablet-plus {
+        margin-right: 0;
+      }
+    }
+
+    #{$this}__media {
+      grid-column: 2/3;
+
+      @include tablet-plus {
+        grid-column: 1/2;
+      }
+    }
+  }
+
+  &.has-text-right {
+    #{$this}__content {
+      margin-left: auto;
+
+      @include tablet-plus {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // for about page last
+  &.last-section {
+    #{$this}__media {
+      img {
+        @include up-laptop {
+          margin-left: -5%;
+          width: 111%;
+          max-width: unset;
+        }
+      }
+    }
+  }
+
+  [data-page-name="processPage"] & {
+    #{$this}__media {
+
+    }
+  }
+
+  &__wrapper {
+    padding: 125px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+
+    @include tablet-plus {
+      padding: 100px 0;
+      grid-template-columns: 100%;
+      grid-column-gap: 0;
+      grid-row-gap: 80px;
+    }
+
+    @include mobile {
+      padding: 100px 0;
+    }
+
+    [data-page-name="processPage"] & {
+      @include tablet-plus {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__content,
+  &__media {
+    grid-row: 1/2;
+
+    @include tablet-plus {
+      grid-column: 1/2;
+    }
+  }
+
+  &__content {
+    margin-top: -10px;
+    width: 28.75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet-plus {
+      width: 100%;
+      grid-row: 1/2;
+    }
+
+    .text-wrap {
+      margin: 0;
+
+      p,
+      li {
+        [data-page-name="colorMapPage"] & {
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+
+  &__media {
+    width: 100%;
+
+    @include tablet-plus {
+      grid-row: 2/3;
+    }
+
+    [data-page-name="aboutPage"] & {
+      @include up-laptop {
+        width: 99.05%;
+      }
+    }
+
+    [data-page-name="processPage"] & {
+      width: 99.05%;
+
+      @include tablet-plus {
+        margin: 0 -124px;
+        width: calc(100% + 248px);
+        padding-bottom: 110.923%;
+      }
+
+      @include mobile {
+        margin: 0 -25px;
+        width: calc(100% + 50px);
+        padding-bottom: 150.156%;
+      }
+    }
+
+    [data-page-name="colorBringsPage"] & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+
+      [data-page-name="colorBringsPage"] & {
+        margin: auto;
+      }
+    }
+  }
+
+  @include tablet-plus {
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      .about-section__title {
+        max-width: 50%;
+      }
+    }
+  }
+
+  @include mobile{
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      .about-section__title {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-top: 50px;
+
+    [data-page-name="colorBringsPage"] & {
+      margin-top: 30.5px;
+    }
+  }
+
+  .about-section-list {
+    &__title {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .about-items {
+      &__item {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .about-item {
+      &__icon {
+        margin: 5px 10px 5px 0;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 2px solid $c-light-gray;
+        border-radius: 50%;
+        overflow: hidden;
+
+        [data-page-name="colorBringsPage"] & {
+          margin: 0;
+          width: 141px;
+          height: 62px;
+          border: none;
+          border-radius: 0;
+        }
+
+        img {
+          position: absolute;
+          top: -2.5%;
+          left: 0;
+          width: 105%;
+          height: 105%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

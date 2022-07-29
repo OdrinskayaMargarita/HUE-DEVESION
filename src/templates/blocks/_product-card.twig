@@ -1,0 +1,73 @@
+{% import "mixins/_icons.twig" as icons %}
+{% import "mixins/_radio.twig" as radio %}
+
+{% macro product(className, item ) %}
+    <div class="{{ className }} product-card js-product-card {% if item.isSold %}is-disabled{% endif %}">
+        <div class="product-card__main-wrap">
+            <div class="product-card__img-wrap">
+                {% if item.tag %}
+                    <div class="product-card__tag tag tag--sale">{{ item.tag }}</div>{% endif %}
+                {% if item.isSold %}
+                    <div class="product-card__sold">sold out</div>{% endif %}
+                <a href="" class="product-card__img js-link js-bg">
+                    <img class="img img--default js-img-default"
+                         src="{{ 'img/products/' + item.colors[0].imagesDefault }}" alt="{{ item.colors[0].name }}">
+                    <img class="img img--hover js-img-hover"
+                         src="{{ 'img/products/' + item.colors[0].imagesHover }}" alt="{{ item.colors[0].name }}">
+                </a>
+
+                <div class="product-card__button">
+                    <button type="button" role="button" aria-label="Add to bag"
+                            class="product-card__buy button button--white js-buy-btn">
+                        <span data-splitting>add to bag</span>
+                        <span data-splitting>add to bag</span>
+                    </button>
+                </div>
+            </div>
+
+            <form action="" class="product-card__fav-form">
+                <button type="button" role="button" aria-label="favorite" class="product-card__fav add-to-fav">
+                    {{ icons.icon('fav') }}
+                </button>
+            </form>
+            {% if item.colors %}
+                <div class="product-card__colors js-colors-wrap">
+                    {# {% if item.colors|length > 5 %} #}
+                    {# <button type="button" role="button" aria-label="Show more" #}
+                    {# class="product-card__colors-more js-more-colors"> #}
+                    {# {{ item.colors|length - 5 }} #}
+                    {# </button> #}
+                    {# {% endif %} #}
+                    {# <div class="colors colors--vertical js-colors"> #}
+                    {# {% for color in item.colors %} #}
+                    {# {% if loop.index > 5 %} #}
+                    {# {% set className = 'colors__item is-hidden' %} #}
+                    {# {% else %} #}
+                    {# {% set className = 'colors__item' %} #}
+                    {# {% endif %} #}
+
+                    {# {{ radio.radioBtn(className, '', color.color, item.index, true, #}
+                    {# 'img/products/' + color.imagesDefault, 'img/products/' + color.imagesHover, color.link, color.name) }} #}
+                    {# {% endfor %} #}
+                    {# </div> #}
+                    <div class="colors colors--vertical js-colors">
+                        {% for color in item.colors %}
+                            {% if loop.index < 6 %}
+                                {{ radio.radioBtn('colors__item', '', color.color, item.index, true,
+                                    'img/products/' + color.imagesDefault, 'img/products/' + color.imagesHover, color.link, color.name) }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <h3 class="product-card__title">
+            <a href="" class="js-link js-name">{{ item.colors[0].name }}</a>
+        </h3>
+        <div class="product-card__price">
+            {% if item.priceOld %}<p class="price price--old">{{ item.priceOld }}</p>{% endif %}
+            <p class="price price--current">{{ item.price }}</p>
+        </div>
+    </div>
+{% endmacro %}

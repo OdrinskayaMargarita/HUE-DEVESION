@@ -1,0 +1,45 @@
+//grid
+$xxsm: 374px;
+$xsm: 459px;
+$sm: 639px;
+$md: 767px;
+$lg: 1023px;
+$xl: 1199px;
+$xxl: 1399px;
+
+$mobile-width: 320px;
+$small-width: 640px;
+$tablet-width: 768px;
+$tablet-plus-width: 1024px;
+$laptop-width: 1200px;
+$desktop-width: 1400px;
+$desktop-plus-width: 1500px;
+
+//fonts
+$font: Montserrat, Helvetica, Arial, sans-serif;
+$font-oswald: Oswald, Helvetica, Arial, sans-serif;
+$font-poppins: Poppins, Helvetica, Arial, sans-serif;
+
+//colors
+$c-black: #000;
+$c-opacity-black: rgba(0, 0, 0, .5);
+$c-white: #fff;
+$c-grey: #999999;
+$c-light-gray: #F9F8F6;
+$c-red: #ED4545;
+$c-yellow: #FCE147;
+$c-blue: #76E1FB;
+$c-pink: #FF94E1;
+$c-green: #4FC684;
+$c-blue-search: #0777C3;
+$c-gold: #d48a31;
+$c-border: #EBEBEB;
+$c-sale: #FD6262;
+$c-thumb: #FF7F42;
+$c-dark: #373737;
+
+// timing
+$time-sm: 300ms;
+$time-md: 500ms;
+$time-lg: 800ms;
+$time-xl: 1100ms;

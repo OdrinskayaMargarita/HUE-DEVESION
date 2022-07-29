@@ -1,0 +1,61 @@
+.legal {
+  padding-top: 200px;
+
+  @include tablet-plus {
+    padding-top: 180px;
+  }
+
+  @include mobile {
+    padding-top: 170px;
+  }
+
+  .article-content__wrapper {
+    padding-top: 0;
+    padding-bottom: 142px;
+
+    @include tablet{
+      padding-bottom: 100px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 125px;
+    line-height: 88px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 37px;
+      line-height: 44px;
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      margin-bottom: 63px;
+      text-align: left;
+    }
+  }
+
+  &__content {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 14px;
+      line-height: 25px;
+
+      @include tablet {
+        margin-top: 63px;
+      }
+    }
+
+    & > div,
+    p,
+    li {
+      @include tablet {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}

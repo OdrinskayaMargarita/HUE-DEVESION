@@ -1,0 +1,53 @@
+---
+title: List
+description: List
+pageName: List
+---
+
+{% extends 'layouts/_page-default.twig' %}
+
+{% block content %}
+    <main style="padding-top: 150px;">
+        <div class="container container--s">
+            <ol class="list-pages">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="pdp.html">PDP</a></li>
+                <li><a href="plp.html">PLP</a></li>
+                <li><a href="search-result.html">Search Result</a></li>
+                <li><a href="search-result-empty.html">Search Result Empty</a></li>
+                <li><a href="account-addresses.html">Account-adresses</a></li>
+                <li><a href="account-addresses.html">Account-adresses</a></li>
+                <li><a href="account-order-history.html">Account-order-history</a></li>
+                <li><a href="account-order-history-empty.html">Account-order-history empty - just as example for QA</a></li>
+                <li><a href="account-wishlist.html">Account-wishlist</a></li>
+                <li><a href="sustainability.html">Sustainbility</a></li>
+                <li><a href="shipping-cart.html">Shipping Cart</a></li>
+                <li><a href="privacy-page.html">Privacy</a></li>
+                <li><a href="our-process.html">Our process</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registration.html">Signup</a></li>
+                <li><a href="forgot-pass.html">Forgot Pass</a></li>
+                <li><a href="color-brings.html">Color brings us together</a></li>
+{#                <li><a href="colour-map.html">Colour Map</a></li>#}
+            </ol>
+        </div>
+    </main>
+    <style>
+        .list-pages{
+          flex-direction: column;
+          display: flex;
+          align-items: center;
+          font-size: 22px;
+        }
+        .list-pages li{
+          margin-bottom: 20px;
+        }
+        .list-pages li:hover{
+          text-decoration: underline;
+        }
+    </style>
+{% endblock %}

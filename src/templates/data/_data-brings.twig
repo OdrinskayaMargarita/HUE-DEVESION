@@ -1,0 +1,44 @@
+{% set sections = [
+    {
+        mode: 'left',
+        img: 'color-brings1.jpg',
+        title: 'How it works',
+        content: '<p>Hue Division Color system is based on coloro 3D model where every color is specified by a 7-digit code. This code represents a point where Hue, Lightness and Chroma intersect. The system is built by a 160-step Hue wheel with a vertical axis of 100 Lightness values and a radial range of 100 Chroma values. Together, they create a new model to define human color perception for a potential 1.6 million colors. The only limit is your imagination.</p>',
+        list: {
+            items: [
+                {
+                    icon: 'coloro.jpg'
+                }
+            ]
+        }
+    },
+    {
+        color: '#F9F8F6',
+        mode: 'right',
+        img: 'color-brings2.jpg',
+        title: 'Our colors',
+        content: '
+        <p>There are 3,500 colors available in the Coloro products. We chose them in collaboration with leaders from across the creative and fashion industries, and of course, talking to consumers.</p>'
+    }
+] %}
+
+{% set bottomSection = [
+    {
+        imgDesk: 'color-brings3.jpg',
+        imgMob: 'color-brings3_mob.jpg',
+        title: 'Hue',
+        content: '<p>Hue: There are 160 Coloro Hues – from red to orange, yellow to green, green to blue, and purple..</p>'
+    },
+    {
+        imgDesk: 'color-brings4.jpg',
+        imgMob: 'color-brings4_mob.jpg',
+        title: 'Lightness',
+        content: '<p>Lightness values go from 00 to 99. By moving up and down the vertical axis, you choose how light your color should be.</p>'
+    },
+    {
+        imgDesk: 'color-brings5.jpg',
+        imgMob: 'color-brings5_mob.jpg',
+        title: 'Chroma',
+        content: '<p>Chroma stands for saturation. Values go from 00 (non-chromatic colors, black, white and grays) to 99, the maximum value human eye and technology can support. By moving outwards from the center of the Hue wheel, you choose the saturation value of your color.</p>'
+    }
+] %}

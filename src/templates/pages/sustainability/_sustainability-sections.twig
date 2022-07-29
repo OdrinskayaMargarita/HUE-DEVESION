@@ -1,0 +1,13 @@
+{% import "pages/sustainability/_content-and-image.twig" as block %}
+{% import "blocks/_modal-video.twig" as modal %}
+
+{{ modal.modalVideo('modal-2', true, 'video/homepage/hero.mp4', 'video/homepage/hero.webm', 'img/homepage/hero/hero-2.jpg') }}
+{{ modal.modalVideo('modal-3', false, '', '', '', true, '578454732') }}
+
+{% for section in dataSustainability.sections %}
+    <section id="{{ section.id }}" class="sustainability-section">
+        {% for item in section.blocks %}
+            {{ block.contentAndImage(item, section.id, "img/sustainabilitypage/blocks/", section.id, loop.index) }}
+        {% endfor %}
+    </section>
+{% endfor %}

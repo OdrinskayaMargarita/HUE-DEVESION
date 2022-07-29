@@ -1,0 +1,24 @@
+.icon {
+  fill: none;
+  stroke: $c-black;
+  stroke-width: 2px;
+  height: 20px;
+  width: 23px;
+  transition: none;
+
+  &_item {
+    &--instagram,
+    &--facebook {
+      fill: $c-black;
+      stroke: none;
+    }
+  }
+
+  &_color {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $c-white;
+    border-radius: 50%;
+  }
+}

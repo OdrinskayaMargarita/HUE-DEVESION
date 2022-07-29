@@ -1,0 +1,49 @@
+<div class="catalog-sort" id="catalog-sort">
+    <div class="catalog-sort__title">
+        <p>Sort By</p>
+        <a href="javascript:void(0)" id="catalog-sort--close" class="catalog-sort__close">
+            {{ icons.icon('close') }}
+        </a>
+    </div>
+    <form class="catalog-sort__form">
+        <ul class="catalog-sort__list">
+            <li>
+                <label for="featured"  class="js-hovered">Featured</label>
+                <input type="radio" id="featured" name="catalog-sort" checked>
+            </li>
+            <li>
+                <label for="priceLH" class="js-hovered">Price: low - High</label>
+                <input type="radio" id="priceLH" name="catalog-sort">
+            </li>
+            <li>
+                <label for="priceHL" class="js-hovered">Price: High - Low</label>
+                <input type="radio" id="priceHL" name="catalog-sort">
+            </li>
+            <li>
+                <label for="nameAZ" class="js-hovered">Name: A - z</label>
+                <input type="radio" id="nameAZ" name="catalog-sort">
+            </li>
+            <li>
+                <label for="nameZA" class="js-hovered">Name: Z - A</label>
+                <input type="radio" id="nameZA" name="catalog-sort">
+            </li>
+            <li>
+                <label for="new-old" class="js-hovered">Newest - Oldest</label>
+                <input type="radio" id="new-old" name="catalog-sort">
+            </li>
+            <li>
+                <label for="old-new" class="js-hovered">Oldest - Newest</label>
+                <input type="radio" id="old-new" name="catalog-sort">
+            </li>
+            <li>
+                <label for="bestselling" class="js-hovered">bestselling</label>
+                <input type="radio" id="bestselling" name="catalog-sort">
+            </li>
+        </ul>
+
+        <button class="catalog-sort--apply-sort button--black">
+            <span data-splitting>Apply</span>
+            <span data-splitting>Apply</span>
+        </button>
+    </form>
+</div>

@@ -1,0 +1,159 @@
+.catalog-filter {
+  &--open {
+    transform: translate(0, 0);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    &--inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      p {
+        margin-right: 25px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+      }
+
+      button {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+      }
+    }
+
+    .icon_close {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    padding: 10px 0;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+
+    &.is-active {
+      span {
+        &:nth-child(2) {
+          display: block;
+        }
+
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+
+    span {
+      &:nth-child(1) {
+        display: block;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .catalog-filter-list {
+    &__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      opacity: 0.5;
+
+      &.is-hidden {
+        display: none;
+
+        &.is-visible {
+          display: flex;
+        }
+      }
+
+      &.has-checked {
+        opacity: 1;
+      }
+
+      .name {
+        display: block;
+        margin-right: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+      }
+
+      .icon-check {
+        position: relative;
+        margin-left: auto;
+        flex: none;
+        display: block;
+        width: 17px;
+        height: 17px;
+        min-height: 17px;
+        background: $c-white;
+        border: 1px solid transparent;
+        transition: background-color 500ms;
+
+        &::before {
+          @include pseudo();
+          width: 6px;
+          height: 10px;
+          border: solid $c-white;
+          border-width: 0 2px 2px 0;
+          transform: rotateZ(45deg);
+          margin: 1px 5px;
+        }
+      }
+
+      .checkbox {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        &:checked ~ .icon-check {
+          border: 1px solid $c-black;
+          background: $c-black;
+        }
+      }
+    }
+
+    &__icon {
+      border-radius: 30px;
+      display: block;
+      margin-bottom: 2px;
+      margin-right: 15px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

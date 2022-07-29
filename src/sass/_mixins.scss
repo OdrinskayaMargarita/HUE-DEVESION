@@ -1,0 +1,154 @@
+$rem-base: 18px;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) {
+    $value: 0;
+  }
+  // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+@mixin target-ie11 {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin target-edge {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+@mixin target-safari {
+  @media not all and (min-resolution: .001dpcm) {
+    @content;
+  }
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+  @if $position {
+	  -o-object-position: $position;
+	     object-position: $position;
+  	font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+  	font-family: 'object-fit: #{$fit}';
+  }
+}
+
+// mobile first breakpoints
+
+@mixin up-small { // 576  -> 0
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin up-tablet { // * > 768
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin up-tablet-plus { // > 1024
+  @media (min-width: #{$tablet-plus-width}) {
+    @content;
+  }
+}
+
+@mixin up-laptop { // > 1200 && < 1399
+  @media (min-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+@mixin up-desktop { // * > 1400
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+// desktop first breakpoints
+@mixin laptop-plus { // < 1500
+  @media (max-width: #{$desktop-plus-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop { // < 1400
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-plus { // < 1200
+  @media (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet { // < 1024
+  @media (max-width: #{$tablet-plus-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile { // < 768
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+// phone landscape
+@mixin phone-landscape {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape),
+  only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape),
+  only screen and (max-device-height: 411px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// other
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin clear-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+@mixin anim($param: all, $dur: 0.5s, $type: ease-in-out, $delay: 0s) {
+  transition: $param $dur $type $delay;
+}

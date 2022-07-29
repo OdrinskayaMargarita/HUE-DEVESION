@@ -1,0 +1,22 @@
+---
+title: Sustainability
+description: Template
+pageName: sustainabilityPage
+---
+{% block otherStyles %}
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+{% endblock %}
+
+{% import "data/_data-sustainability.twig" as dataSustainability %}
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_inner-hero.twig" as hero %}
+
+{% block content %}
+    <main>
+        {{ hero.innerHero("sustainability", "#4FC684",
+            "img/sustainabilitypage/sustainability-hero_mob.jpg", "img/sustainabilitypage/sustainability-hero.jpg") }}
+        {% include "pages/sustainability/_anchors.twig" %}
+        {% include "pages/sustainability/_sustainability-sections.twig" %}
+    </main>
+{% endblock %}

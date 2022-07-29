@@ -1,0 +1,25 @@
+{% import "mixins/_icons.twig" as icons %}
+
+{% macro sortBy(title, items, id) %}
+    <div class="sort-modal js-modal" id="{{ id }}">
+        <div class="sort-modal__head">
+            <div class="sort-modal__title">
+                Sort By
+            </div>
+            <button class="sort-modal__close btn-close js-hovered js-close"
+                    type="button" role="button" aria-label="close">
+                {{ icons.icon('cross') }}
+            </button>
+        </div>
+        <div class="sort-modal__content">
+            <div class="sort-list">
+                {% for item in items %}
+                    <a class="sort-list__item sorting {% if loop.index == 1 %}is-active{% endif %}" href="{{ item.href }}">
+                        <span class="sorting__name name">{{ item.name }}</span>
+                        <span class="sorting__icon icon icon_check"></span>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

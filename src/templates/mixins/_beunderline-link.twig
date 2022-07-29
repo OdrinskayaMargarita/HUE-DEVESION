@@ -1,0 +1,6 @@
+{% macro linkBeUnderline(name, size, selector, href, target) %}
+    <a href="{{ href }}" class="{% if selector%}{{ selector }}__link{% endif%} link-beunderline link-beunderline--{{ size }}"
+    target="{{ target }}" {% if target == '_blank' %}rel="nofollow noreferrer"{% endif %}>
+        {{ name }}
+    </a>
+{% endmacro %}

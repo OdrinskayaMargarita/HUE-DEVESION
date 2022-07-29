@@ -1,0 +1,18 @@
+{% import "mixins/_titles.twig" as titles %}
+{% import "mixins/_adaptive-images.twig" as images %}
+
+{% macro innerHero(title, color, srcMob, srcDesk) %}
+    <section class="inner-hero">
+        <div class="inner-hero__wrapper">
+            <div class="inner-hero__img">
+                {{ images.image(srcMob, srcDesk, title) }}
+            </div>
+            <div class="inner-hero__bg" style="background-color: {{ color }}"></div>
+            <div class="inner-hero__content">
+                <div class="container">
+                    {{ titles.title(title, "inner-hero", "l", "light", "h1") }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}

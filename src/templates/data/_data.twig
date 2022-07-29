@@ -1,0 +1,818 @@
+{# global #}
+{% set loaderDotsColors = [
+    '#F9F8F6',
+    '#FCE147',
+    '#FF7F42',
+    '#FD6262',
+    '#FF94E1',
+    '#E8A8FF',
+    '#4FC684',
+    '#76E0FB',
+    '#0777C3'
+] %}
+
+{% set cursorColors = ['#FD6262', '#4FC685', '#0777C3'] %}
+
+{% set submenuShop = [
+    {
+        name: 'by fabric',
+        className: 'fabric',
+        items: [
+        {
+            name: 'French Terry',
+            href: '#'
+        },
+        {
+            name: 'Jersey',
+            href: '#'
+        },
+        {
+            name: 'Towel Terry',
+            href: '#'
+        }
+        ]
+    },
+    {
+        name: 'By category',
+        className: 'category',
+        items: [
+        {
+            name: 'Hoodies ',
+            href: '#'
+        },
+        {
+            name: 'Shorts',
+            href: '#'
+        },
+        {
+            name: 'Sweatshirts',
+            href: '#'
+        },
+        {
+            name: 'T Shirts ',
+            href: '#'
+        },
+        {
+            name: 'Sweatpants',
+            href: '#'
+        }
+    ]
+    },
+    {
+        name: 'By Hue',
+        className: 'hue',
+        items: [
+        {
+            color: '#F9F8F6',
+            name: 'Beige',
+            href: '#'
+        },
+        {
+            color: '#FCE147',
+            name: 'Illuminating Yellow  ',
+            href: '#'
+        },
+        {
+            color: '#FF7F42',
+            name: 'Orange',
+            href: '#'
+        },
+        {
+            color: '#ff0000',
+            name: 'Red',
+            href: '#'
+        },
+        {
+            color: '#008000',
+            name: 'Quiet Wave Green',
+            href: '#'
+        },
+        {
+            color: '#76E0FB',
+            name: 'A.I. Aqua',
+            href: '#'
+        },
+        {
+            color: '#0777C3',
+            name: 'Classics Blue',
+            href: '#'
+        },
+        {
+            color: '#FF94E1',
+            name: 'Azalea Pink',
+            href: '#'
+        },
+        {
+            color: '#E8A8FF',
+            name: 'Purple Rose',
+            href: '#'
+        },
+        {
+            color: '#866DD5',
+            name: 'Purple',
+            href: '#'
+        },
+        {
+            color: '#F9F8F6',
+            name: 'Beige',
+            href: '#'
+        },
+        {
+            color: '#FCE147',
+            name: 'Illuminating Yellow  ',
+            href: '#'
+        },
+        {
+            color: '#FF7F42',
+            name: 'Orange',
+            href: '#'
+        },
+        {
+            color: '#ff0000',
+            name: 'Red',
+            href: '#'
+        },
+        {
+            color: '#008000',
+            name: 'Quiet Wave Green',
+            href: '#'
+        },
+        {
+            color: '#76E0FB',
+            name: 'A.I. Aqua',
+            href: '#'
+        }
+    ]
+    },
+    {
+        name: 'Collection',
+        className: 'collection',
+        items: [
+        {
+            name: 'New York Soho Collection',
+            href: '#',
+            img: '/shop/shop-10.jpg'
+        },
+        {
+            name: 'New York Pop Collection',
+            href: '#',
+            img: '/shop/shop-9.jpg'
+        },
+        {
+            name: 'Summer Pop Collection',
+            href: '#',
+            img: '/shop/shop-8.jpg'
+        }
+    ]
+    }
+] %}
+
+{% set submenuAbout = [
+    {
+        name: 'About Us',
+        href: 'about.html',
+        img: '/about/about-1.jpg'
+    },
+    {
+        name: 'Sustainability',
+        href: 'sustainability.html',
+        img: '/about/about-2.jpg'
+    },
+    {
+        name: 'Colour Brings Us Together',
+        href: 'color-brings.html',
+        img: '/about/about-4.jpg'
+    }
+] %}
+
+{# home page #}
+{% set arrivals = [
+    {
+        index: 0,
+        href: '#',
+        name: 'Broadway Black Women’s Organic Cotton Reversed Sweatshirt',
+        price: '$129',
+        colors: [
+        {
+            color: '#FCE147',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Yellow Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#3DB171',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#76E1FB',
+            imagesDefault: 'arr-3.jpg',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7F42',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Red Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#C4C4C4',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        }]
+    },
+    {
+        index: 1,
+        href: '#',
+        name: 'Broadway Black Women’s Organic Cotton Reversed Sweatshirt',
+        price: '$129',
+        colors: [
+        {
+            color: '#3DB171',
+            imagesDefault: 'arr-3.jpg',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }]
+    },
+    {
+        index: 2,
+        href: '#',
+        name: 'Broadway Black Men’s Organic Cotton Reversed Sweatshirt',
+        price: '$129',
+        colors: [
+        {
+            color: '#FCE147',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Yellow Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#3DB171',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#76E1FB',
+            imagesDefault: 'arr-3.jpg',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7F42',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Red Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#C4C4C4',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        }]
+    },
+    {
+        index: 3,
+        href: '#',
+        name: 'Broadway Black Women’s Organic Cotton Reversed Sweatshirt',
+        price: '$129',
+        colors: [
+        {
+            color: '#FCE147',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Yellow Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#3DB171',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#76E1FB',
+            imagesDefault: 'arr-3.jpg',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7F42',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Red Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#C4C4C4',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        }]
+    },
+    {
+        index: 4,
+        href: '#',
+        name: 'Broadway Black Women’s Organic Cotton Reversed Sweatshirt',
+        price: '$129',
+        colors: [
+        {
+            color: '#3DB171',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }]
+    },
+    {
+        index: 5,
+        href: '#',
+        name: 'Broadway Black Men’s Organic Cotton Reversed Sweatshirt',
+        price: '$129',
+        colors: [
+        {
+            color: '#FCE147',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Yellow Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#3DB171',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#76E1FB',
+            imagesDefault: 'arr-3.jpg',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7F42',
+            imagesDefault: 'arr-1.jpg',
+            link: 'pdp.html',
+            name: 'Classics Red Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#C4C4C4',
+            imagesDefault: 'arr-2.jpg',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        }]
+    }
+] %}
+
+{% set termsBanners = [
+    {
+        title: 'Pay later',
+        text: 'Buy now, pay in 4 interest free payments with Klarna',
+        color: '#76E1FB'
+    },
+    {
+        title: 'Free shipping',
+        text: 'Free shipping anywhere within the United States',
+        color: '#FF94E1'
+    },
+    {
+        title: 'Free worldwide',
+        text: 'Free worldwide shipping, when you spend over $300',
+        color: '#4FC685'
+    }
+] %}
+
+{% set discover = [
+    {
+        href: '#',
+        src: 'discover-1.jpg',
+        srcMob: 'discover-1_mob.jpg',
+        name: 'French Terry'
+    },
+    {
+        href: '#',
+        src: 'discover-2.jpg',
+        srcMob: 'discover-2_mob.jpg',
+        name: 'Jersey'
+    },
+    {
+        href: '#',
+        src: 'discover-3.jpg',
+        srcMob: 'discover-3_mob.jpg',
+        name: 'Towel Terry'
+    }
+] %}
+
+{% set collectionImages = [
+    {
+        src: 'col-1.jpg',
+        name: 'yellow collection'
+    },
+    {
+        src: 'col-2.jpg',
+        name: 'yellow collection'
+    },
+    {
+        src: 'col-3.jpg',
+        name: 'yellow collection'
+    },
+    {
+        src: 'col-4.jpg',
+        name: 'yellow collection'
+    },
+    {
+        src: 'col-5.jpg',
+        name: 'yellow collection'
+    },
+    {
+        src: 'col-6.jpg',
+        name: 'yellow collection'
+    }
+] %}
+
+{% set chooseCollection = [
+    {
+        id: 'FFCD00',
+        color: '#FFCD00',
+        collectionImages: ['yellow/col-1.jpg', 'yellow/col-2.jpg', 'yellow/col-3.jpg', 'yellow/col-4.jpg', 'yellow/col-5.jpg', 'yellow/col-6.jpg'],
+        titles: {
+            hue: '098',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Yellow Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: 'FF6720',
+        color: '#FF6720',
+        collectionImages: ['orange/col-1.jpg', 'orange/col-2.jpg', 'orange/col-3.jpg', 'orange/col-4.jpg', 'orange/col-5.jpg', 'orange/col-6.jpg'],
+        titles: {
+            hue: '099',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Orange Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: 'E4002B',
+        color: '#E4002B',
+        collectionImages: ['red/col-1.jpg', 'red/col-2.jpg', 'red/col-3.jpg', 'red/col-4.jpg', 'red/col-5.jpg', 'red/col-6.jpg'],
+        titles: {
+            hue: '09',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Red Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: '93328E',
+        color: '#93328E',
+        collectionImages: ['purple/col-1.jpg', 'purple/col-2.jpg', 'purple/col-3.jpg', 'purple/col-4.jpg', 'purple/col-5.jpg', 'purple/col-6.jpg'],
+        titles: {
+            hue: '098',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Purple Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: 'EF4B81',
+        color: '#EF4B81',
+        collectionImages: ['pink/col-1.jpg', 'pink/col-2.jpg', 'pink/col-3.jpg', 'pink/col-4.jpg', 'pink/col-5.jpg', 'pink/col-6.jpg'],
+        titles: {
+            hue: '097',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Pink Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: '0032A0',
+        color: '#0032A0',
+        collectionImages: ['dark-blue/col-1.jpg', 'dark-blue/col-2.jpg', 'dark-blue/col-3.jpg', 'dark-blue/col-4.jpg', 'dark-blue/col-5.jpg', 'dark-blue/col-6.jpg'],
+        titles: {
+            hue: '08',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Dark Blue Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: '71C5E8',
+        color: '#71C5E8',
+        collectionImages: ['light-blue/col-1.jpg', 'light-blue/col-2.jpg', 'light-blue/col-3.jpg', 'light-blue/col-4.jpg', 'light-blue/col-5.jpg', 'light-blue/col-6.jpg'],
+        titles: {
+            hue: '9',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Light Blue Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    },
+    {
+        id: '009A44',
+        color: '#009A44',
+        collectionImages: ['green/col-1.jpg', 'green/col-2.jpg', 'green/col-3.jpg', 'green/col-4.jpg', 'green/col-5.jpg', 'green/col-6.jpg'],
+        titles: {
+            hue: '094',
+            lightness: '59',
+            chroma: '30',
+            title: 'The Illuminating Green Collection',
+            descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+            link: '#'
+        }
+    }
+] %}
+
+{% set lookbook = [
+    {
+        src: 'look-1.jpg',
+        name: 'summer lookbook'
+    },
+    {
+        src: 'look-2.jpg',
+        name: 'summer lookbook'
+    },
+    {
+        src: 'look-3.jpg',
+        name: 'summer lookbook'
+    },
+    {
+        src: 'look-1.jpg',
+        name: 'summer lookbook'
+    },
+    {
+        src: 'look-2.jpg',
+        name: 'summer lookbook'
+    },
+    {
+        src: 'look-3.jpg',
+        name: 'summer lookbook'
+    }
+] %}
+
+{% set media = [
+    {
+        href: '#',
+        src: 'media-1.jpg',
+        name: 'Up & Coming Fashion Designers',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Bronx',
+            color: '#FD6262'
+        }]
+    },
+    {
+        href: '#',
+        src: 'media-2.jpg',
+        color: '#4FC685',
+        name: 'Is Sustainable Fashion Completely Pointless?',
+        author: 'Minjoon Kim',
+        time: '10',
+        categories: [
+        {
+            href: '#',
+            name: 'The High Line',
+            color: '#FCE147'
+        }]
+    },
+    {
+        href: '#',
+        src: 'media-1.jpg',
+        color: '#76E0FB',
+        name: 'Up & Coming Fashion Designers',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Subway',
+            color: '#0777C3'
+        }]
+    },
+    {
+        href: '#',
+        src: 'media-2.jpg',
+        color: '#4FC685',
+        name: 'Is Sustainable Fashion Completely Pointless?',
+        author: 'Minjoon Kim',
+        time: '10',
+        categories: [
+        {
+            href: '#',
+            name: 'Sustainability',
+            color: '#4FC684'
+        }]
+    }
+] %}
+
+{% set insta = [
+    'insta-1.jpg',
+    'insta-2.jpg',
+    'insta-3.jpg',
+    'insta-4.jpg'
+] %}
+
+{# blog page #}
+{% set mediaPageHero = [
+    {
+        src: 'hero-1.jpg',
+        name: 'img'
+    },
+    {
+        src: 'hero-2.jpg',
+        name: 'img'
+    },
+    {
+        src: 'hero-3.jpg',
+        name: 'img'
+    },
+    {
+        src: 'hero-4.jpg',
+        name: 'img'
+    }
+] %}
+
+{% set mediaPageCategories = [
+    {
+        href: '#',
+        name: 'Bronx',
+        color: '#FD6262'
+    },
+    {
+        href: '#',
+        name: 'The High Line',
+        color: '#FCE147'
+    },
+    {
+        href: '#',
+        name: 'Subway',
+        color: '#0777C3'
+    },
+    {
+        href: '#',
+        name: 'Sustainability',
+        color: '#4FC684'
+    }
+] %}
+
+{% set mediaPageSortBy = [
+    {
+        href: '/blog.html',
+        name: 'Last Added'
+    },
+    {
+        href: '/blog.html',
+        name: 'Most Read'
+    }
+] %}
+
+{% set mediaPageItems = [
+    {
+        href: '/article.html',
+        src: 'media-1.jpg',
+        name: 'Article about something, Lorem ipsum',
+        text: 'Another core belief that we are driven by is that style doesn’t have to cost the Earth. Every piece is 100% organic cotton, with eco-friendly dyes and even recycled labels. We don’t do plastic either. All our packaging is completely reusable.',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'The High Line',
+            color: '#FCE147'
+        },
+        {
+            href: '#',
+            name: 'Sustainability',
+            color: '#4FC684'
+        }],
+        tag: 'Blog'
+    },
+    {
+        href: '/article.html',
+        src: 'media-2.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Sustainability',
+            color: '#4FC684'
+        }],
+        tag: 'Blog'
+    },
+    {
+        href: '/article.html',
+        src: 'media-3.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Subway',
+            color: '#0777C3'
+        }],
+        tag: 'Press'
+    },
+    {
+        href: '/article.html',
+        src: 'media-4.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Sustainability',
+            color: '#4FC684'
+        }],
+        tag: 'Press'
+    },
+    {
+        href: '/article.html',
+        src: 'media-5.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Subway',
+            color: '#0777C3'
+        }],
+        tag: 'Blog'
+    },
+    {
+        href: '/article.html',
+        src: 'media-6.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'bronx',
+            color: '#FD6262'
+        }],
+        tag: 'Blog'
+    },
+    {
+        href: '/article.html',
+        src: 'media-7.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'bronx',
+            color: '#FD6262'
+        }],
+        tag: 'Press'
+    },
+    {
+        href: '/article.html',
+        src: 'media-8.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Sustainability',
+            color: '#4FC684'
+        }],
+        tag: 'Blog'
+    },
+    {
+        href: '/article.html',
+        src: 'media-9.jpg',
+        name: 'Article about something, Lorem ipsum',
+        author: 'Minjoon Kim',
+        time: '2',
+        categories: [
+        {
+            href: '#',
+            name: 'Subway',
+            color: '#0777C3'
+        }],
+        tag: 'Blog'
+    }
+] %}

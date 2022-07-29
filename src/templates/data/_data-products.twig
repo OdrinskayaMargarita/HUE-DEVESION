@@ -1,0 +1,449 @@
+{% set products = [
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#0777C3',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Pink Unisex Organic'
+        },
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Red Unisex Organic'
+        }
+    ]
+    },
+    {
+        name: 'Classics Orange Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#FF7F42',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Orange Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#ffffff',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics White Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#0777C3',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FCE147',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Other Color Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#ffffff',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Not Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#3DB171',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Not Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Not Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Not Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#4FC684',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#866DD5',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FFAECB',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7A5D',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#0777C3',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        tag: 'sale',
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$99',
+        priceOld: '$129',
+        colors: [
+        {
+            color: '#FF7F42',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FCE147',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#4FC684',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        isSold: true,
+        tag: 'sale',
+        name: 'Classics White Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#ffffff',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics White Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#FD6262',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#0777C3',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Pink Unisex Organic'
+        },
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Red Unisex Organic'
+        }
+    ]
+    },
+    {
+        name: 'Classics Orange Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#FF7F42',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Orange Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#ffffff',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#0777C3',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FCE147',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#ffffff',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#3DB171',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FD6262',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#4FC684',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Green Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#866DD5',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FFAECB',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7A5D',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#0777C3',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        tag: 'sale',
+        name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$99',
+        priceOld: '$129',
+        colors: [
+        {
+            color: '#FF7F42',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF7F42',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FCE147',
+            imagesDefault: 'product2.jpg',
+            imagesHover: 'product2-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#FF94E1',
+            imagesDefault: 'product1.jpg',
+            imagesHover: 'product1-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        },
+        {
+            color: '#4FC684',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics Blue Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    },
+    {
+        isSold: true,
+        tag: 'sale',
+        name: 'Classics White Unisex Organic & Recycled Cotton Sweatpants',
+        price: '$129',
+        colors: [
+        {
+            color: '#ffffff',
+            imagesDefault: 'product3.jpg',
+            imagesHover: 'product3-hover.png',
+            link: 'pdp.html',
+            name: 'Classics White Unisex Organic & Recycled Cotton Sweatpants'
+        }
+    ]
+    }
+] %}

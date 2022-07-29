@@ -1,0 +1,195 @@
+{% set hero = {
+    images:
+    {
+        srcMob: 'color-map-mob.png',
+        srcTab: 'color-map-tab.png',
+        srcDesk: 'color-map-desk.png'
+    },
+    bg: '#866DD5',
+    title: 'NY Colour Map 2021',
+    text: '<p>Walking the streets of New York City, one feels compelled to soak in the dynamism of the environment, to absorb the electric energy of each neighborhood and street corner.</p>'
+
+} %}
+
+{% set chooseCollection = [
+    {
+        id: 'FFCD00',
+        color: '#FFCD00',
+        thumb: 'm0.jpg',
+        collectionImages: ['yellow/col-1.jpg', 'yellow/col-3.jpg', 'yellow/col-5.jpg'],
+        label: 'Illuminating Yellow',
+        titles: {
+        hue: '098',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Yellow Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: 'FF6720',
+        color: '#FF6720',
+        thumb: 'm1.jpg',
+        collectionImages: ['orange/col-1.jpg', 'orange/col-3.jpg', 'orange/col-5.jpg'],
+        label: 'Illuminating Orange',
+        titles: {
+        hue: '099',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Orange Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: 'E4002B',
+        color: '#E4002B',
+        thumb: 'm0.jpg',
+        collectionImages: ['red/col-1.jpg', 'red/col-3.jpg', 'red/col-5.jpg'],
+        label: 'Illuminating Red',
+        titles: {
+        hue: '09',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Red Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: '93328E',
+        color: '#93328E',
+        thumb: 'm1.jpg',
+        collectionImages: ['purple/col-1.jpg', 'purple/col-3.jpg', 'purple/col-5.jpg'],
+        label: 'Illuminating Purple',
+        titles: {
+        hue: '098',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Purple Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: 'EF4B81',
+        color: '#EF4B81',
+        thumb: 'm0.jpg',
+        collectionImages: ['pink/col-1.jpg', 'pink/col-3.jpg', 'pink/col-5.jpg'],
+        label: 'Purple Rose',
+        titles: {
+        hue: '097',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Pink Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: '0032A0',
+        color: '#0032A0',
+        thumb: 'm1.jpg',
+        collectionImages: ['dark-blue/col-1.jpg', 'dark-blue/col-3.jpg', 'dark-blue/col-5.jpg'],
+        label: 'Classic Blue',
+        titles: {
+        hue: '08',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Dark Blue Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: '71C5E8',
+        color: '#71C5E8',
+        thumb: 'm0.jpg',
+        collectionImages: ['light-blue/col-1.jpg', 'light-blue/col-3.jpg', 'light-blue/col-5.jpg'],
+        label: 'Light Blue',
+        titles: {
+        hue: '9',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Light Blue Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: '009A44',
+        color: '#009A44',
+        thumb: 'm0.jpg',
+        collectionImages: ['green/col-1.jpg', 'green/col-3.jpg', 'green/col-5.jpg'],
+        label: 'Illuminating Green',
+        titles: {
+        hue: '094',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Green Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: 'c4ff11',
+        color: '#c4ff11',
+        thumb: 'm1.jpg',
+        collectionImages: ['yellow/col-1.jpg', 'yellow/col-3.jpg', 'yellow/col-5.jpg'],
+        label: 'Illuminating Yellow',
+        titles: {
+        hue: '098',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Yellow Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: '58ff20',
+        color: '#58ff20',
+        thumb: 'm0.jpg',
+        collectionImages: ['orange/col-1.jpg', 'orange/col-3.jpg', 'orange/col-5.jpg'],
+        label: 'Illuminating Orange',
+        titles: {
+        hue: '099',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Orange Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: 'ff20a2',
+        color: '#ff20a2',
+        thumb: 'm1.jpg',
+        collectionImages: ['red/col-1.jpg', 'red/col-3.jpg', 'red/col-5.jpg'],
+        label: 'Illuminating Red',
+        titles: {
+        hue: '09',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Red Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    },
+    {
+        id: '20ff93',
+        color: '#20ff93',
+        thumb: 'm0.jpg',
+        collectionImages: ['purple/col-1.jpg', 'purple/col-3.jpg', 'purple/col-5.jpg'],
+        label: 'Illuminating Purple',
+        titles: {
+        hue: '098',
+        lightness: '59',
+        chroma: '30',
+        title: 'The Illuminating Purple Collection',
+        descr: 'Like the only available New York taxi on a rainy day, this collection is meant to grab your attention and let its presence be known…',
+        link: '#'
+    }
+    }
+] %}

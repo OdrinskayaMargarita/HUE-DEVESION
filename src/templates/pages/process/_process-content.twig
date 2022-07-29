@@ -1,0 +1,41 @@
+{% import "blocks/_modal-video.twig" as modal %}
+
+{{ modal.modalVideo('modal-1', false, '', '', '', true, '578455099') }}
+
+<section class="about-section process-section has-text-left">
+    <div class="container container--m">
+        <div class="about-section__wrapper">
+            <div class="about-section__media media-wrap has-fullscreen">
+                {# <img src="img/process/process-1.jpg" alt="img"> #}
+
+                {# IF video is embed from vimeo #}
+                {# <div class="plyr__video-embed js-player js-hero-player js-inline-player" data-plyr-provider="vimeo" #}
+                {# data-plyr-embed-id="https://vimeo.com/578455099"></div> #}
+                {# <button type="button" class="plyr__fullscreen js-fullscreen"  data-modalVideo="modal-1" aria-label="Fullscreen"> #}
+                {# {{ icons.icon('expand') }} #}
+                {# </button> #}
+                {# ENDIF video is embed from vimeo #}
+
+                {# IF video is embed as file #}
+                <video class="plyr__video js-player" playsinline controls
+                       data-poster="img/process/process-1.jpg">
+                    <source src="video/homepage/hero.mp4" type="video/mp4"/>
+                    <source src="video/homepage/hero.webm" type="video/webm"/>
+                </video>
+                <button type="button" class="plyr__fullscreen js-fullscreen" data-modalVideo="modal-1"
+                        aria-label="Fullscreen">
+                    {{ icons.icon('expand') }}
+                </button>
+                {# ENDIF video is embed as file #}
+            </div>
+            <div class="about-section__content">
+                {{ titles.title("Process", "about-section", "xs", "dark", "h2") }}
+                <div class="about-section__text text-wrap">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis amet aliquet quis id
+                        turpis accumsan, scelerisque. Egestas faucibus elit adipiscing vulputate. Sapien lorem suscipit
+                        est orci lorem. Vitae viverra congue orci id vitae.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

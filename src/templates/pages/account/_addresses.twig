@@ -1,0 +1,116 @@
+<div class="account__addresses account-addresses">
+{#    {% set route = app.request.get('_route') %}#}
+
+{#    <div class="{{ route starts with 'post' ? 'open' }}"></div>#}
+
+    <div class="account-addresses__head">
+        <p class="account__subtitle">
+            Addresses
+        </p>
+        <ul class="account-addresses__list addresses-list">
+            {% for item in dataAccount.addresses %}
+                <li class="addresses-list__item item {% if item.state %}is-{{ item.state }}{% endif %}">
+                    {% if item.state %}
+                        <div class="item__tag tag tag--default">{{ item.state }}</div>
+                    {% endif %}
+                    <div class="item__address address">
+                        <p class="address__item">
+                            {{ item.name.first }} {{ item.name.last }}
+                        </p>
+                        <p class="address__item">
+                            {{ item.address }}
+                        </p>
+                        <p class="address__item">
+                            {{ item.city.code }} {{ item.city.name }}
+                        </p>
+                        <p class="address__item">
+                            {{ item.country }}
+                        </p>
+                    </div>
+                    <div class="item__links address-links">
+                        {{ underlines.linkUnderline('Edit', 'xs', 'address-links') }}
+                        {{ underlines.linkUnderline('Remove', 'xs', 'address-links') }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="account-addresses__content">
+        <p class="account__subtitle">
+            Add a New Addresses
+        </p>
+        <div class="account-addresses__form">
+            {% set address = dataAccount.addresses[0] %}
+            <form action="" class="form-theme form-theme--addresses form-valid">
+                {# if error classes: form-theme__item form-theme__field has-error #}
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="firstname">First Name</label>
+                        <input id="firstname" type="text" value="{{ address.name.first }}" data-input="text" class="input-required">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="lastname">Last Name</label>
+                        <input id="lastname" type="text" value="{{ address.name.last }}"  data-input="text" class="input-required">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="company">Company</label>
+                        <input id="company" type="text" value="{{ address.company }}">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="address">Address</label>
+                        <input id="address" type="text" value="{{ address.address }}"  class="input-required" data-input="text">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="city">City</label>
+                        <input id="city" type="text" value="{{ address.city.name }}" class="input-required" data-input="text">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="city"></label>
+                        <select class="select-menu" id="city" name="city">
+                            <option value="0" disabled selected>Spain</option>
+                            <option value="1">Germany</option>
+                            <option value="2">Austria</option>
+                            <option value="3">Italy</option>
+                            <option value="4">France</option>
+                            <option value="5">USA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="code">Postal Code</label>
+                        <input id="code" type="number" value="{{ address.city.code }}" class="input-required" data-input="text">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="number" value="{{ address.phone }}" class="input-required" data-input="phone">
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap has-checkbox js-hovered">
+                        <input id="set-default" class="checkbox__input" type="checkbox" name="set-default">
+                        <label for="set-default" class="checkbox">Set as default address</label>
+                    </div>
+                </div>
+                <div class="form-theme__item form-theme__button">
+                    <button type="submit" class="button button--black">
+                        <span data-splitting>Save Address</span>
+                        <span data-splitting>Save Address</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

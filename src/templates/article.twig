@@ -1,0 +1,20 @@
+---
+title: Article
+description: Article
+pageName: articlePage
+---
+{% import "data/_data-article.twig" as dataArticle %}
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_media.twig" as media %}
+
+{% block content %}
+    <main>
+        <section class="article" style="--color: #4FC684; --headTextColor:#ffffff">
+            {% include "pages/article/_head.twig" %}
+            {% include "pages/article/_article.twig" %}
+        </section>
+
+        {{ media.mediaBlock('read more', data.media, '#F9F8F6') }}
+    </main>
+{% endblock %}

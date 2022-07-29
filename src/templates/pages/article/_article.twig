@@ -1,0 +1,45 @@
+<div class="article__content article-content js-content">
+    <div class="article-content__wrapper">
+        <div class="article-content__share share js-share">
+            <div class="share__name">Share</div>
+            <div class="share__list share-list">
+                {% for item in dataArticle.socIcons %}
+                    <a class="share-list__item" href="{{ item.href }}">
+                        {{ icons.icon(item.icon) }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="article-content__info article-info">
+            <div class="article-info__top">
+                <div class="article-info__tag">
+                    <span class="tag tag--default">{{ dataArticle.article.tag }}</span>
+                </div>
+
+                <div class="article-info__categories categories">
+                    {% for cat in dataArticle.article.categories %}
+                        <a href="{{ cat.href }}" class="categories__item category">
+                            <span class="category__icon icon icon_color" style="background-color: {{ cat.color }}"></span>
+                            <span class="category__name name">{{ cat.name }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="article-info__bottom">
+                <div class="article-info__date">
+                    {{ dataArticle.article.info.date }}
+                </div>
+                <div class="article-info__author">
+                    <span>by {{ dataArticle.article.info.author }}</span>
+                </div>
+                <div class="article-info__reading-time">
+                    {{ icons.icon('book') }}
+                    <span>{{ dataArticle.article.info.time }} min read</span>
+                </div>
+            </div>
+        </div>
+        <div class="article-content__text text-wrap">
+            {{ dataArticle.article.content | safe }}
+        </div>
+    </div>
+</div>

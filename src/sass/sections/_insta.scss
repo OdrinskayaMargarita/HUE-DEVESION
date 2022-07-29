@@ -1,0 +1,98 @@
+.insta {
+  padding: 125px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  &__head {
+    //margin-bottom: -4vw;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    padding: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  &__gallery {
+    padding-top: 45px;
+    //padding-top: calc(45px + 4vw);
+
+    @include tablet {
+      margin: 0 -217px;
+      //margin: 0 -45px;
+      //overflow-y: scroll;
+    }
+
+    @include mobile {
+      margin: 0 -34.93vw 0 -16.53vw;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+
+      @include tablet {
+        grid-column-gap: 13px;
+        //margin: 0 -172px;
+        //padding-bottom: 10px;
+        //width: calc(100% + 344px);
+      }
+
+      @include mobile {
+        grid-column-gap: 11px;
+      }
+
+      figure {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+
+        &:nth-child(3) {
+          top: -55px;
+          transform: rotate(15deg);
+
+          @include tablet {
+            top: -37px;
+          }
+        }
+
+        a {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{% import "blocks/_media-item.twig" as media %}
+{% import "blocks/_sort-by.twig" as sort %}
+
+<section class="articles">
+    <div class="container">
+        <div class="articles__wrapper">
+            <div class="articles__navigation navigation">
+                <div class="navigation__filter filter-list">
+                    <a href="{{ cat.href }}" class="filter-list__item filter-category all-categories is-active">
+                            <span class="filter-category__icons icons" style="width: {{ data.mediaPageCategories.length * 6}}px">
+                                {% for cat in data.mediaPageCategories %}
+                                    <span class="filter-category__icon icon icon_color" style="background-color: {{ cat.color }}"></span>
+                                {% endfor %}
+                            </span>
+                        <span class="filter-category__name name">All</span>
+                    </a>
+
+                    {% for cat in data.mediaPageCategories %}
+                        <a href="{{ cat.href }}" class="filter-list__item filter-category">
+                            <span class="filter-category__icon icon icon_color" style="background-color: {{ cat.color }}"></span>
+                            <span class="filter-category__name name">{{ cat.name }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+
+                <div class="navigation__sort">
+                    <button type="button" role="button" aria-label="Sort by"
+                            class="sort-by js-modal-btn" data-modal="modal-sort">
+                        Sort by <span>(1)</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="articles__list articles-list">
+                {% for item in data.mediaPageItems %}
+                    <div class="articles-list__item {% if loop.index == 1 %}large-card colored-card{% else %}small-card{% endif %}">
+                        {{ media.mediaItem(item, 'blogpage/media', item.tag) }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="articles__pagination">
+                {% include "blocks/_pagination.twig" %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ sort.sortBy('Sort by', data.mediaPageSortBy, 'modal-sort') }}

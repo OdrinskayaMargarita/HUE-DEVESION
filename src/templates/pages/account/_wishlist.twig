@@ -1,0 +1,19 @@
+{% import "data/_data-products.twig" as dataProducts %}
+{% import "blocks/_product-card.twig" as productCard %}
+
+<div class="account__wishlist order-wishlist">
+    <div class="order-wishlist__content">
+        <div class="account__subtitle">
+            Wish list
+        </div>
+        <div class="account-wishlist__catalog">
+            <div class="catalog js-catalog js-catalog-products">
+                {% for item in dataProducts.products %}
+                    {% if loop.index < 7 %}
+                        {{ productCard.product('might-like__item is-small', item) }}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+.collection-name {
+  text-align: center;
+  color: currentColor;
+  //opacity: 0;
+  //mix-blend-mode: multiply;
+  //filter: brightness(75%);
+  transition: none;
+
+  &__head {
+    margin-bottom: 14.68px;
+    font-family: $font-oswald;
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+
+    .map-section & {
+      margin-bottom: 34.68px;
+
+      @include mobile {
+        margin-bottom: 35.72px;
+      }
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 12px;
+      justify-content: center;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    dt {
+      grid-column: auto;
+      grid-row: 1/2;
+      font-size: 10px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      .map-section & {
+        font-size: 7.60545px;
+        line-height: 11px;
+      }
+    }
+
+    dd {
+      grid-column: auto;
+      grid-row: 2/3;
+      position: relative;
+      font-size: 33.6055px;
+      line-height: 50px;
+      text-transform: uppercase;
+
+      .map-section & {
+        font-size: 30.4218px;
+        line-height: 45px;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        &::before {
+          @include pseudo();
+          top: 0.77em;
+          right: -11px;
+          width: 6px;
+          height: 2px;
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    display: block;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 438px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    .map-section & {
+      margin-bottom: 17px;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 22px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      @include tablet {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 19px;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+
+    .map-section & {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 260px;
+      font-weight: 300;
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+
+    .map-section & {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.1em;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<section id="colorMap" class="map-section">
+    <div class="map-section__wrapper">
+{#        <div class="point-circle js-point-hover js-point-circle">#}
+{#            <div class="circle-wrap"></div>#}
+{#        </div>#}
+{#        <div class="point-img js-point-hover js-point-img">#}
+{#            <div class="img-wrap">#}
+{#                {% for item in dataMap.chooseCollection %}#}
+{#                    <img class="{{ item.color }}" src="/img/color-map/{{ item.thumb }}" alt="{{ item.label }}">#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+
+        <div class="map-section__zooms zooms">
+            <button class="zooms__item zoom-in js-zoom-in" type="button" role="button" aria-label="Zoom in">
+                {{ icons.icon('zoom-more') }}
+            </button>
+            <button  class="zooms__item zoom-out js-zoom-out" type="button" role="button" aria-label="Zoom out">
+                {{ icons.icon('zoom-less') }}
+            </button>
+        </div>
+
+        <div class="map-section__navbar navbar js-map-navbar">
+            <div class="navbar__wrapper">
+                <p class="navbar__title navbar-title">
+                    Show Me
+                </p>
+                <div class="navbar__colors map-colors">
+                    <label for="all-colors"
+                           class="radio map-colors__item js-radio js-hovered"
+                           data-color="all-colors">
+                        <input id="all-colors" class="radio__input js-radio-input" type="radio" name="radio-navbar">
+                        <span class="radio__icon icon js-icon" style="background: linear-gradient(180deg, #76D1BB 0%, #76A0D1 42.24%, #D1CE76 71.93%, #FF4646 100%)"></span>
+                        <span class="radio__name name js-radio-name">All colours</span>
+                    </label>
+                    {% for item in dataMap.chooseCollection %}
+                        {{ radio.radioBtn(' map-colors__item', '', item.color, 'navbar', true, '', '', '', '', item.label) }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="map-section__map">
+            <div class="point-circle js-point-hover js-point-circle">
+                <div class="circle-wrap"></div>
+            </div>
+            <div class="point-img js-point-hover js-point-img">
+                <div class="img-wrap">
+                    {% for item in dataMap.chooseCollection %}
+                        <img class="{{ item.color }}" src="/img/color-map/{{ item.thumb }}" alt="{{ item.label }}">
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="map"></div>
+        </div>
+
+        <div class="map-section__content">
+            <div class="collection">
+                <div class="collection__list collection-list">
+                    {% for item in dataMap.chooseCollection %}
+                        <div class="collection-list__item collection-item js-collection-item" data-collection="{{ item.color }}"
+                        style="background-color: {{ item.color }}">
+                            <div class="collection-item__name collection-name">
+                                <div class="collection-name__head">
+                                    <dl>
+                                        <dt>Hue</dt>
+                                        <dd>{{ item.titles.hue }}
+                                        </dd>
+                                        <dt>Lightness</dt>
+                                        <dd>{{ item.titles.lightness }}
+                                        </dd>
+                                        <dt>chroma</dt>
+                                        <dd>{{ item.titles.chroma }}
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <h3 class="collection-name__title">
+                                    <a href="{{item.titles.href}}">{{ item.titles.title }}</a>
+                                </h3>
+                                <p class="collection-name__description">
+                                    {{item.titles.descr}}
+                                </p>
+                                <a href="{{item.titles.href}}" class="collection-name__link link-theme link-theme--l">Discover collection</a>
+                            </div>
+
+                            <div class="collection-item__media">
+                                {% for img in item.collectionImages %}
+                                    <div class="collection-item__img collection-item__img--{{ loop.index }}">
+                                        <img src="img/choose-collection/{{ img }}" alt="{{ item.titles.title }}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

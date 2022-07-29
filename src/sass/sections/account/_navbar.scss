@@ -1,0 +1,72 @@
+.account-navbar {
+  padding: 40px;
+  border: 1px solid $c-border;
+  border-radius: 10px;
+
+  @include mobile {
+    margin: 0 -25px;
+    padding: 40px 25px;
+    width: calc(100% + 50px);
+    //border-radius: 0;
+  }
+
+  &__list {
+    @include mobile {
+      margin: 0 -25px;
+    }
+  }
+
+  .navbar-list {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+
+    @include tablet-plus {
+      flex-direction: row;
+    }
+
+    @include mobile {
+      padding: 0 25px;
+      width: 100%;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow-y: auto;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+      background-color: transparent !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background: transparent !important;
+    }
+
+    &__link {
+      &:not(:last-child) {
+        margin-bottom: 22px;
+
+        @include tablet-plus {
+          margin: 0 100px 0 0;
+        }
+
+        @include tablet {
+          margin-right: auto;
+        }
+      }
+
+      &:not(:first-child) {
+        @include tablet {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}

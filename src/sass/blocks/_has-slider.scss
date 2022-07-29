@@ -1,0 +1,60 @@
+.has-slider {
+  &__navigation {
+    margin-right: -13px;
+    display: grid;
+    grid-template-columns: auto 78px repeat(2, 35px);
+    grid-column-gap: 10px;
+    align-items: center;
+
+    @include mobile {
+      grid-template-columns: auto 162.01px repeat(2,35px);
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    .swiper-pagination {
+      margin-left: auto;
+      padding-right: 12px;
+      width: fit-content;
+      font-weight: 300;
+      position: unset;
+      font-size: 16px;
+      line-height: 37px;
+      white-space: nowrap;
+
+      .is-active {
+        font-weight: 500;
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $c-black;
+    }
+
+    .swiper-button {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.swiper-button-disabled {
+        opacity: .3;
+        pointer-events: none;
+      }
+
+      .icon {
+        width: 6.5px;
+        height: 11px;
+        fill: transparent;
+        stroke: currentColor;
+        stroke-width: 2px;
+      }
+    }
+  }
+}

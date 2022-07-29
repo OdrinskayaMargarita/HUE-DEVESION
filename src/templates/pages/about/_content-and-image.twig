@@ -1,0 +1,44 @@
+{% import "mixins/_titles.twig" as titles %}
+
+{% macro contentAndImage(section, src, className) %}
+    <section class="about-section {% if section.mode == 'left' %}has-text-left{% else %}has-text-right{% endif %} {% if className %}{{ className }}{% endif %}"
+             {% if section.color %}style="background-color: {{ section.color }}"{% endif %}>
+        <div class="container container--m">
+            <div class="about-section__wrapper">
+                <div class="about-section__media">
+                    <img src="{{ src }}{{ section.img }}" alt="{{ section.title }}">
+                </div>
+                <div class="about-section__content">
+                    {% if section.subtitle %}
+                        <p class="about-section__subtitle">
+                            {{ section.subtitle }}
+                        </p>
+                    {% endif %}
+                    {{ titles.title(section.title, "about-section", "xs", "dark", "h2") }}
+                    <div class="about-section__text text-wrap">
+                        {{ section.content | safe }}
+                    </div>
+                    {% if section.list %}
+                        <div class="about-section__list about-section-list">
+                            {% if section.list.title %}
+                                <h4 class="about-section-list__title">{{ section.list.title }}</h4>
+                            {% endif %}
+                            <ul class="about-section-list__items about-items">
+                                {% for item in section.list.items %}
+                                    <li class="about-items__item about-item">
+                                        {% if item.icon %}
+                                            <div class="about-item__icon">
+                                                <img src="{{ src }}{{ item.icon }}" alt="{{ item.name }}">
+                                            </div>
+                                        {% endif %}
+                                        {{ item.name }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}

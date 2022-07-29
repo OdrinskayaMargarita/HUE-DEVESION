@@ -1,0 +1,56 @@
+---
+title: Colour Brings
+description: Template
+pageName: colorBringsPage
+---
+
+{% import "data/_data-brings.twig" as dataBrings %}
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_inner-hero.twig" as hero %}
+{% import "pages/about/_content-and-image.twig" as section %}
+
+
+{% block content %}
+    <main>
+        {{ hero.innerHero("Color<br/> brings us<br/> Together", "#76E0FB", "img/colorBrings/color-brings.jpg", "img/colorBrings/color-brings.jpg") }}
+        {% for item in dataBrings.sections %}
+            {{ section.contentAndImage(item, "img/colorBrings/") }}
+        {% endfor %}
+
+        <section class="bottom-section">
+            <div class="container">
+                <div class="bottom-section__wrapper js-has-slider has-slider">
+                    <div class="bottom-section__navigation has-slider__navigation navigation">
+                        <div class="swiper-pagination"></div>
+                        <div class="line"></div>
+                        <button type="button" role="button" aria-label="prev" class="swiper-button swiper-prev">
+                            {{ icons.icon('caret-left') }}
+                        </button>
+                        <button type="button" role="button" aria-label="next" class="swiper-button swiper-next">
+                            {{ icons.icon('caret-right') }}
+                        </button>
+                    </div>
+                    <div class="bottom-section__content has-slider__content">
+                        <div class="bottom-section__slider has-slider__slider swiper-container">
+                            <div class="bottom-list slider swiper-wrapper">
+                                {% for item in dataBrings.bottomSection %}
+                                    <div class="bottom-list__item slide swiper-slide">
+                                        <div class="slide__media">
+                                            {{ images.image('img/colorBrings/' + item.imgMob, 'img/colorBrings/' + item.imgDesk, item.title) }}
+                                        </div>
+                                        {{ titles.title(item.title, "slide", "xs", "dark", "h2") }}
+                                        <div class="slide__text text-wrap">
+                                            {{ item.content | safe }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+{% endblock %}

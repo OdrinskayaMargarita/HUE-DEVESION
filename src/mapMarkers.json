@@ -1,0 +1,313 @@
+{
+  "markers": [
+    {
+      "name": "#FFCD00",
+      "color": "#FFCD00",
+      "lat": 40.76760369906154,
+      "lng": -73.83453509480246,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FFCD00",
+      "color": "#FFCD00",
+      "lat": 40.68880041286557,
+      "lng": -73.85655213976696,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FFCD00",
+      "color": "#FFCD00",
+      "lat": 40.67305042647812,
+      "lng": -73.77059964605705,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FFCD00",
+      "color": "#FFCD00",
+      "lat": 40.7468295126523,
+      "lng": -73.9068419002475,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FFCD00",
+      "color": "#FFCD00",
+      "lat": 40.74210803290426,
+      "lng": -73.89981101259578,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+
+    {
+      "name": "#FF6720",
+      "color": "#FF6720",
+      "lat": 40.72656042726416,
+      "lng": -73.90749402995904,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FF6720",
+      "color": "#FF6720",
+      "lat": 40.71659590636484,
+      "lng": -73.87401702068773,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FF6720",
+      "color": "#FF6720",
+      "lat": 40.70289442773693,
+      "lng": -73.79020080492657,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#FF6720",
+      "color": "#FF6720",
+      "lat": 40.649068718880315,
+      "lng": -73.88214482908302,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+
+    {
+      "name": "#E4002B",
+      "color": "#E4002B",
+      "lat": 40.73831367445652,
+      "lng": -73.77756942244137,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#E4002B",
+      "color": "#E4002B",
+      "lat": 40.72591158196192,
+      "lng": -73.86238281334984,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#E4002B",
+      "color": "#E4002B",
+      "lat": 40.6779349384641,
+      "lng": -73.7462142119636,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+
+    {
+      "name": "#93328E",
+      "color": "#93328E",
+      "lat": 40.72669117163304,
+      "lng": -73.79551689968854,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#93328E",
+      "color": "#93328E",
+      "lat": 40.680082932663574,
+      "lng": -73.9064256280718,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#93328E",
+      "color": "#93328E",
+      "lat": 40.64693465432084,
+      "lng": -73.9322459386885,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+
+    {
+      "name": "#EF4B81",
+      "color": "#EF4B81",
+      "lat": 40.71321419663016,
+      "lng": -73.90931160466711,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#EF4B81",
+      "color": "#EF4B81",
+      "lat": 40.71743717720891,
+      "lng": -73.768542841335,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#EF4B81",
+      "color": "#EF4B81",
+      "lat": 40.700535421460735,
+      "lng": -73.77651322201983,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#EF4B81",
+      "color": "#EF4B81",
+      "lat": 40.64727626372567,
+      "lng": -73.76980182541027,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+
+    {
+      "name": "#0032A0",
+      "color": "#0032A0",
+      "lat": 40.76760369906154,
+      "lng": -73.83453509480246,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#0032A0",
+      "color": "#0032A0",
+      "lat": 40.68880041286557,
+      "lng": -73.85655213976696,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#0032A0",
+      "color": "#0032A0",
+      "lat": 40.67305042647812,
+      "lng": -73.77059964605705,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#71C5E8",
+      "color": "#71C5E8",
+      "lat": 40.7468295126523,
+      "lng": -73.9068419002475,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#71C5E8",
+      "color": "#71C5E8",
+      "lat": 40.74210803290426,
+      "lng": -73.89981101259578,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#71C5E8",
+      "color": "#71C5E8",
+      "lat": 40.72656042726416,
+      "lng": -73.90749402995904,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#009A44",
+      "color": "#009A44",
+      "lat": 40.71659590636484,
+      "lng": -73.87401702068773,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#009A44",
+      "color": "#009A44",
+      "lat": 40.70289442773693,
+      "lng": -73.79020080492657,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#c4ff11",
+      "color": "#c4ff11",
+      "lat": 40.649068718880315,
+      "lng": -73.88214482908302,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#c4ff11",
+      "color": "#c4ff11",
+      "lat": 40.73831367445652,
+      "lng": -73.77756942244137,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#c4ff11",
+      "color": "#c4ff11",
+      "lat": 40.72591158196192,
+      "lng": -73.86238281334984,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#58ff20",
+      "color": "#58ff20",
+      "lat": 40.6779349384641,
+      "lng": -73.7462142119636,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#58ff20",
+      "color": "#58ff20",
+      "lat": 40.6779349384641,
+      "lng": -73.7462142119636,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#58ff20",
+      "color": "#58ff20",
+      "lat": 40.6779349384641,
+      "lng": -73.7462142119636,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#ff20a2",
+      "color": "#ff20a2",
+      "lat": 40.680082932663574,
+      "lng": -73.9064256280718,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#ff20a2",
+      "color": "#ff20a2",
+      "lat": 40.72669117163304,
+      "lng": -73.79551689968854,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#ff20a2",
+      "color": "#ff20a2",
+      "lat": 40.71321419663016,
+      "lng": -73.90931160466711,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#20ff93",
+      "color": "#20ff93",
+      "lat": 40.700535421460735,
+      "lng": -73.77651322201983,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    },
+    {
+      "name": "#20ff93",
+      "color": "#20ff93",
+      "lat": 40.72656042726416,
+      "lng": -73.90749402995904,
+      "img": "/img/color-map/m0.jpg",
+      "zIndex": 1
+    }
+  ]
+}

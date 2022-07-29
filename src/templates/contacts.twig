@@ -1,0 +1,16 @@
+---
+title: Contacts
+description: Template
+pageName: contactsPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_inner-hero.twig" as hero %}
+
+{% block content %}
+    <main>
+        {{ hero.innerHero("contact", "#0777C3",
+            "img/contactspage/contacts_mob.jpg", "img/contactspage/contacts.jpg") }}
+        {% include "pages/contacts/_contacts.twig" %}
+    </main>
+{% endblock %}

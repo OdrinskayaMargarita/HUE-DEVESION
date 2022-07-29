@@ -1,0 +1,23 @@
+{% import "data/_data-products.twig" as dataProducts %}
+{% import "blocks/_product-card.twig" as productCard %}
+
+<section class="search-res">
+    <div class="container container--s">
+        <p class="res-for">Results for</p>
+        <div class="search-res__title">
+            {{ titles.title("Cotton", "hero", "m", "", "h3") }}
+            <span>23</span>
+        </div>
+        <div class="search-res__inner js-catalog-products">
+            {% for item in dataProducts.products %}
+                {% if loop.index < 9 %}
+                    {{ productCard.product('might-like__item is-small', item) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+{#        <div class="search-res__pagination">#}
+{#            {% include "blocks/_pagination.twig" %}#}
+{#        </div>#}
+    </div>
+</section>

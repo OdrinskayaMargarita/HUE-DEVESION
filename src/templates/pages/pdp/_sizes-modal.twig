@@ -1,0 +1,126 @@
+{% import "data/_data-sizes-guide.twig" as data %}
+
+<div id="modal-sizes" class="pdp__modal modal-sizes js-modal">
+    <div class="pdp__modal__title modal-sizes__title">
+        <p class="pdp__modal__title--inner">Size Charts</p>
+        <button type="button" role="Close modal" class="pdp__modal--close js-close">
+            {{ icons.icon('close') }}
+        </button>
+    </div>
+
+    <div class="modal-sizes__content">
+        <div class="tabs js-tabs">
+            <div class="tabs__nav tabs-nav js-tab-nav">
+                {% for item in data.sizesGuide %}
+                    <button class="tabs-nav__button tab-btn js-tab-btn"
+                            type="button" role="button" aria-label="Show {{ item.product }} sizes guide">
+                        {{ item.product }}
+                    </button>
+                {% endfor %}
+            </div>
+            <div class="tabs__content tabs-content js-tabs-content">
+                <div class="tabs-content__vertical js-vertical"></div>
+                <div class="tabs-content__horizontal js-horizontal"></div>
+                {% for item in data.sizesGuide %}
+                    <div class="tabs-content__item tab js-tabs-item">
+                        <div class="tab__tables innertabs js-tabs">
+                            <div class="innertabs__nav innertabs-nav js-tab-nav">
+                                <p class="innertabs-nav__name">
+                                    Measurements
+                                </p>
+                                {% for measure in item.measurements %}
+                                    <button class="innertabs-nav__button innertab-btn js-tab-btn js-innertab-btn"
+                                            type="button" role="button"
+                                            aria-label="Show {{ item.product }} sizes guide in {{ measure.value }}">
+                                        {{ measure.value }}
+                                    </button>
+                                {% endfor %}
+                            </div>
+                            <div class="innertabs__content innertabs-content js-tabs-content">
+                                {% for measure in item.measurements %}
+                                    <div class="innertabs-content__item innertab js-tabs-item js-innertab">
+                                        <div class="sizes-table js-sizes-table">
+                                            <div class="sizes-table__head table-head table-row">
+                                                {% for type in item.measurementsTypes %}
+                                                    {% if type %}
+                                                        <div class="table-head__item table-row__item js-row-item">
+                                                            {{ type }}
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+
+                                            <div class="sizes-table__body table-body js-table-body">
+                                                {% for size in measure.sizes %}
+                                                    <div class="table-body__item table-row">
+                                                        {% if size.size %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.size }}
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if size.waist %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.waist }}
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if size.risingLength %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.risingLength }}
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if size.hip %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.hip }}
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if size.totalLength %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.totalLength }}
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if size.inseam %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.inseam }}
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if size.bottomWidth %}
+                                                            <div class="table-row__item js-body-row-item">
+                                                                {{ size.bottomWidth }}
+                                                            </div>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="tab__description sizes-description">
+                            <p class="sizes-description__title">
+                                How to measure {{ item.product }}
+                            </p>
+                            <div class="sizes-description__content">
+                                <div class="sizes-description__text text-wrap">
+                                    <ol>
+                                        {% for point in item.howTo %}
+                                            <li>{{ point | safe }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                </div>
+                                <div class="sizes-description__note">
+                                    Sizes can vary from 2-3 centimeters because they are measured by hand.
+                                    The size matched on a label can differ from the one you have ordered
+                                </div>
+                                <div class="sizes-description__img">
+                                    <img src="/img/sizes/{{ item.img }}" alt="{{ item.product }}">
+                                </div>
+                            </div>
+                            <a href="#" class="sizes-description__link">Size conversions</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

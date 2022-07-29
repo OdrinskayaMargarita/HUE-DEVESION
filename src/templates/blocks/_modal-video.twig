@@ -1,0 +1,30 @@
+{% import "mixins/_icons.twig" as icons %}
+
+{% macro modalVideo(id, html5, mp4, webm, poster, vimeo, embed) %}
+    <div id="{{ id }}" class="modal-video js-modal">
+        <div class="modal-video__overlay js-hovered js-close"></div>
+        <div class="modal-video__content js-media">
+            <button class="modal-video__close btn-close js-hovered js-close"
+                    type="button" role="button" aria-label="close">
+                {{ icons.icon('cross') }}
+            </button>
+            <div class="modal-video__video media-wrap js-modal-media">
+                {% if vimeo %}
+                    {# IF video is embed from vimeo - src must be here by default #}
+                    <div class="plyr__video-embed js-player js-modal-player" data-plyr-provider="vimeo"
+                         data-plyr-embed-id="https://vimeo.com/{{ embed }}"></div>
+                    {# ENDIF video is embed from vimeo #}
+                {% endif %}
+                {% if html5 %}
+                    {# IF video is embed as file - we don't need src, it'll be added from script #}
+                    <video class="plyr__video js-player js-modal-player" playsinline controls
+                           data-poster="{{ poster }}">
+                        {% if mp4 %}<source src="{{ mp4 }}" type="video/mp4"/>{% endif %}
+                        {% if webm %}<source src="{{ webm }}" type="video/webm"/>{% endif %}
+                    </video>
+                    {# ENDIF video is embed as file #}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

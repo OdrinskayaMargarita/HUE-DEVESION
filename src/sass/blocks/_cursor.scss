@@ -1,0 +1,64 @@
+a,
+button,
+.js-hovered,
+.js-hovered input {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 1000;
+  width: 59px;
+  height: 60px;
+  pointer-events: none;
+  transform: rotate(-31deg) translate(-20%, -115%);
+
+  .no-scroll & {
+    position: fixed;
+  }
+
+  &.is-visible {
+    .circle {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &.is-disabled {
+    .circle {
+      opacity: .3;
+      transform: scale(.5);
+    }
+  }
+
+  &__item {
+    position: absolute;
+
+    &:nth-child(1) {
+      top: 69.76%;
+      left: 37.3%;
+    }
+
+    &:nth-child(2) {
+      top: 65.46%;
+      left: 16.54%;
+    }
+
+    &:nth-child(3) {
+      top: 88.71%;
+      left: 23.51%;
+    }
+  }
+
+  .circle {
+    width: 35.55px;
+    height: 35.55px;
+    opacity: 0;
+    border: 1px solid;
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    will-change: transform;
+    transition: opacity 400ms ease, transform 700ms ease;
+  }
+}

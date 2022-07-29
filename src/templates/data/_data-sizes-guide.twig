@@ -1,0 +1,537 @@
+{% set sizesGuide = [
+    {
+        product: 'hoodies',
+        img: 'hoodies.jpg',
+        howTo: [
+        '<b>Waist:</b> Measure the width of the waist',
+        '<b>Rising Length:</b> The length between the top of the waistband and the crotch',
+        '<b>Hip:</b> Measure the fullest part of the hip',
+        '<b>Total Length:</b> The length measured between the top of the waistband and the bottom',
+        '<b>Inseam:</b> The length measured between the crotch and the hem',
+        '<b>Bottom Width:</b> The width of the opening at the bottom of the leg'
+    ],
+        measurementsTypes: ['size', 'waist', 'rising length', 'hip', 'total length', 'inseam', 'bottom width'],
+        measurements: [
+        {
+            value: 'cm',
+            sizes: [
+            {
+                size: '1',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9',
+                bottomWidth: '12.7'
+            }
+        ]
+        },
+        {
+            value: 'inches',
+            sizes: [
+            {
+                size: '1i',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2i',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3i',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4i',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5i',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9',
+                bottomWidth: '12.7'
+            }
+        ]}
+    ]},
+    {
+        product: 'shorts',
+        img: 'shorts.jpg',
+        howTo: [
+        '<b>Waist:</b> Measure the width of the waist',
+        '<b>Rising Length:</b> The length between the top of the waistband and the crotch',
+        '<b>Hip:</b> Measure the fullest part of the hip',
+        '<b>Total Length:</b> The length measured between the top of the waistband and the bottom',
+        '<b>Inseam:</b> The length measured between the crotch and the hem',
+        '<b>Bottom Width:</b> The width of the opening at the bottom of the leg'
+    ],
+        measurementsTypes: ['size', 'waist', 'rising length', 'total length', 'bottom width'],
+        measurements: [
+        {
+            value: 'cm',
+            sizes: [
+            {
+                size: '1',
+                waist: '67.3',
+                risingLength: '25.4',
+                totalLength: '96.5',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2',
+                waist: '68.6',
+                risingLength: '26.7',
+                totalLength: '97.8',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3',
+                waist: '71.1',
+                risingLength: '27.9',
+                totalLength: '99.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4',
+                waist: '76.2',
+                risingLength: '29.2',
+                totalLength: '100',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5',
+                waist: '78.7',
+                risingLength: '30.5',
+                totalLength: '102',
+                bottomWidth: '12.7'
+            }
+        ]
+        },
+        {
+            value: 'inches',
+            sizes: [
+            {
+                size: '1i',
+                waist: '67.3',
+                risingLength: '25.4',
+                totalLength: '96.5',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2i',
+                waist: '68.6',
+                risingLength: '26.7',
+                totalLength: '97.8',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3i',
+                waist: '71.1',
+                risingLength: '27.9',
+                totalLength: '99.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4i',
+                waist: '76.2',
+                risingLength: '29.2',
+                totalLength: '100',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5i',
+                waist: '78.7',
+                risingLength: '30.5',
+                totalLength: '102',
+                bottomWidth: '12.7'
+            }
+        ]}
+    ]},
+    {
+        product: 'sweatshirts',
+        img: 'sweatshirts.jpg',
+        howTo: [
+        '<b>Waist:</b> Measure the width of the waist',
+        '<b>Rising Length:</b> The length between the top of the waistband and the crotch',
+        '<b>Hip:</b> Measure the fullest part of the hip',
+        '<b>Total Length:</b> The length measured between the top of the waistband and the bottom',
+        '<b>Inseam:</b> The length measured between the crotch and the hem',
+        '<b>Bottom Width:</b> The width of the opening at the bottom of the leg'
+    ],
+        measurementsTypes: ['size', 'waist', 'rising length', 'hip', 'total length', 'inseam'],
+        measurements: [
+        {
+            value: 'cm',
+            sizes: [
+            {
+                size: '1',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8'
+            },
+            {
+                size: '2',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1'
+            },
+            {
+                size: '3',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4'
+            },
+            {
+                size: '4',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7'
+            },
+            {
+                size: '5',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9'
+            }
+        ]
+        },
+        {
+            value: 'inches',
+            sizes: [
+            {
+                size: '1i',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8'
+            },
+            {
+                size: '2i',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1'
+            },
+            {
+                size: '3i',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4'
+            },
+            {
+                size: '4i',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7'
+            },
+            {
+                size: '5i',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9'
+            }
+        ]}
+    ]},
+    {
+        product: 't-shirts',
+        img: 't-shirts.jpg',
+        howTo: [
+        '<b>Waist:</b> Measure the width of the waist',
+        '<b>Rising Length:</b> The length between the top of the waistband and the crotch',
+        '<b>Hip:</b> Measure the fullest part of the hip',
+        '<b>Total Length:</b> The length measured between the top of the waistband and the bottom',
+        '<b>Inseam:</b> The length measured between the crotch and the hem',
+        '<b>Bottom Width:</b> The width of the opening at the bottom of the leg'
+    ],
+        measurementsTypes: ['size', 'waist', 'rising length', 'hip', 'total length', 'inseam', 'bottom width'],
+        measurements: [
+        {
+            value: 'cm',
+            sizes: [
+            {
+                size: '1',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9',
+                bottomWidth: '12.7'
+            }
+        ]
+        },
+        {
+            value: 'inches',
+            sizes: [
+            {
+                size: '1i',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2i',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3i',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4i',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5i',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9',
+                bottomWidth: '12.7'
+            }
+        ]}
+    ]},
+    {
+        product: 'track pants',
+        img: 'track-pants.jpg',
+        howTo: [
+        '<b>Waist:</b> Measure the width of the waist',
+        '<b>Rising Length:</b> The length between the top of the waistband and the crotch',
+        '<b>Hip:</b> Measure the fullest part of the hip',
+        '<b>Total Length:</b> The length measured between the top of the waistband and the bottom',
+        '<b>Inseam:</b> The length measured between the crotch and the hem',
+        '<b>Bottom Width:</b> The width of the opening at the bottom of the leg'
+    ],
+        measurementsTypes: ['size', 'waist', 'rising length', 'hip', 'total length', 'inseam', 'bottom width'],
+        measurements: [
+        {
+            value: 'cm',
+            sizes: [
+            {
+                size: '1',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9',
+                bottomWidth: '12.7'
+            }
+        ]
+        },
+        {
+            value: 'inches',
+            sizes: [
+            {
+                size: '1i',
+                waist: '67.3',
+                risingLength: '25.4',
+                hip: '91.4',
+                totalLength: '96.5',
+                inseam: '69.8',
+                bottomWidth: '11.4'
+            },
+            {
+                size: '2i',
+                waist: '68.6',
+                risingLength: '26.7',
+                hip: '94',
+                totalLength: '97.8',
+                inseam: '71.1',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '3i',
+                waist: '71.1',
+                risingLength: '27.9',
+                hip: '96.5',
+                totalLength: '99.1',
+                inseam: '72.4',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '4i',
+                waist: '76.2',
+                risingLength: '29.2',
+                hip: '99.1',
+                totalLength: '100',
+                inseam: '73.7',
+                bottomWidth: '12.7'
+            },
+            {
+                size: '5i',
+                waist: '78.7',
+                risingLength: '30.5',
+                hip: '102',
+                totalLength: '102',
+                inseam: '74.9',
+                bottomWidth: '12.7'
+            }
+        ]}
+    ]}
+] %}

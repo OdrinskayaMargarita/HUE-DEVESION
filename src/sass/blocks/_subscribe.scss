@@ -1,0 +1,130 @@
+.subscribe {
+  background: #FCE147;
+  padding: 45px 0 50px;
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet-plus {
+      align-items: flex-end;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+  }
+
+  &__description {
+    margin-right: 15px;
+    @include tablet-plus {
+      margin-right: 95px;
+    }
+    @include tablet {
+      margin-right: 55px;
+    }
+
+    @include mobile {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+  }
+
+  &__txt {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+
+    b {
+      font-weight: 500;
+    }
+  }
+
+  &__form {
+    margin-top: auto;
+    margin-left: 20px;
+
+    @include tablet {
+      margin-bottom: 2px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  &__block {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    .form-theme__item:not(:last-child){
+      margin-bottom: 0;
+    }
+
+    &.has-error{
+      span{
+        opacity: 1;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    span {
+      position: absolute;
+      top: calc(100% + 6px);
+      transition: 500ms;
+      left: 0;
+      opacity: 0;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FD6262;
+    }
+
+    &-input {
+      width: 100%;
+      border-bottom: 1px solid $c-black;
+      padding: 0 50px 20px 0;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.02em;
+      display: block;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &-button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 10px;
+      z-index: 5;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{% macro scrollToMap(mode) %}
+    <a href="#colorMap" class="scroll-to-map js-anchor">
+        <span class="icon">
+            {% if mode == 'white' %}
+                <img src="img/globe.png" alt="Scroll to the map">
+            {% endif %}
+            {% if mode == 'gray' %}
+                <img src="img/globe-gray.png" alt="Scroll to the map">
+            {% endif %}
+        </span>
+        <span class="name">Scroll to the map</span>
+    </a>
+{% endmacro %}

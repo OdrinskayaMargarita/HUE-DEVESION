@@ -1,0 +1,24 @@
+---
+title: PLP
+description: Template
+pageName: plpPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+
+{% block otherStyles %}
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+{% endblock %}
+
+{% block content %}
+    <main class="main-plp">
+        {% include "pages/plp/_banner.twig" %}
+        {% include "pages/plp/_catalog.twig" %}
+        {% include "pages/plp/_catalog-sort.twig" %}
+        {% include "pages/plp/_catalog-filter.twig" %}
+        {% include "blocks/_terms-banners.twig" %}
+        {% include "blocks/_insta.twig" %}
+        {% include "./blocks/_why-us.twig" %}
+        {% include "pages/plp/_catalog-modal.twig" %}
+    </main>
+{% endblock %}

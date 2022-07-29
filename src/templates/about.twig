@@ -1,0 +1,22 @@
+---
+title: About
+description: Template
+pageName: aboutPage
+---
+{% import "data/_data-about.twig" as dataAbout %}
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "blocks/_inner-hero.twig" as hero %}
+{% import "pages/about/_content-and-image.twig" as section %}
+
+{% block content %}
+    <main>
+        {{ hero.innerHero("About us", "#FD6262", "img/aboutpage/about-hero_mob.jpg", "img/aboutpage/about-hero.jpg") }}
+
+        {% for item in dataAbout.sections %}
+            {% if loop.index == dataAbout.sections.length %}{% set className = "last-section"%}{% endif %}
+            {{ section.contentAndImage(item, "img/aboutpage/", className) }}
+        {% endfor %}
+        {% include "pages/about/_bottom-cta.twig" %}
+    </main>
+{% endblock %}

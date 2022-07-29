@@ -1,0 +1,33 @@
+<section class="discover">
+    <div class="discover__content">
+        <div class="discover__list swiper-container">
+            <div class="discover-list slider swiper-wrapper">
+                {% for item in data.discover %}
+                    <div class="discover__item slide swiper-slide">
+                        <div class="slide__img">
+                            {{ images.image("img/homepage/discover/" + item.srcMob,
+                                "img/homepage/discover/" + item.src, item.name) }}
+                        </div>
+                        <a href="{{ item.href }}" class="slide__content">
+                            <div class="slide__name">
+                                {{ titles.title(item.name, "slide", "m", "light", "h3") }}
+                                <div class="slide__hint link-theme link-theme--m link-theme--white">
+                                    discover
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="discover__navigation navigation">
+                <button type="button" role="button" aria-label="prev" class="swiper-button swiper-prev">
+                    {{ icons.icon('caret-left') }}
+                </button>
+                <button type="button" role="button" aria-label="next" class="swiper-button swiper-next">
+                    {{ icons.icon('caret-right') }}
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

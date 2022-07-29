@@ -1,0 +1,12 @@
+{% import "mixins/_beunderline-link.twig" as beunderlines %}
+
+<div class="account__navbar account-navbar">
+    <div class="account-navbar__list">
+        <div class="navbar-list">
+            {% for item in dataAccount.sidebar %}
+                {% set className = 'js-account-nav navbar-list' %}
+                {{ beunderlines.linkBeUnderline(item.name, 's', className, item.href) }}
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<section class="choose-collection">
+    <div class="choose-collection__bg bg js-bg"></div>
+    <div class="choose-collection__wrapper">
+        <div class="choose-collection__list collection-list">
+            {% for item in data.chooseCollection %}
+                <div class="collection-list__item collection-item js-collection-item">
+                    {% for img in item.collectionImages %}
+                        <div class="collection-item__img collection-item__img--{{ loop.index }}">
+                            <img src="img/choose-collection/{{ img }}" alt="{{ item.titles.title }}">
+                        </div>
+                    {% endfor %}
+                    <div class="collection-item__name collection-name">
+                        <div class="collection-name__head">
+                            <dl>
+                                <dt>Hue</dt>
+                                <dd>{{ item.titles.hue }}
+                                </dd>
+                                <dt>Lightness</dt>
+                                <dd>{{ item.titles.lightness }}
+                                </dd>
+                                <dt>chroma</dt>
+                                <dd>{{ item.titles.chroma }}
+                                </dd>
+                            </dl>
+                        </div>
+                        <h3 class="collection-name__title">
+                            <a href="{{item.titles.href}}">{{ item.titles.title }}</a>
+                        </h3>
+                        <p class="collection-name__description">
+                            {{item.titles.descr}}
+                        </p>
+                        <a href="{{item.titles.href}}" class="collection-name__link link-theme link-theme--l">Discover</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="choose-collection__spinner">
+            <div class="spinner-colors">
+                <div class="spinner-colors__active-position js-active-position">
+                    {{ icons.icon('active-color') }}
+                </div>
+
+                <div class="spinner-colors__list colors-list js-colors-list">
+                    {% for item in data.chooseCollection %}
+                        {{ radio.radioBtn('colors-list__item', '', item.color, 'spinner', false) }}
+                    {% endfor %}
+                </div>
+
+                <div class="pseudo"></div>
+
+                <div class="spinner-colors__random">
+                    <button class="btn-spin js-btn-spin"
+                            type="button" role="button" aria-label="Take a Spin">
+                        Take a Spin
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+{#<div class="background-black" id="background-black"></div>#}
+<div class="catalog__modal" id="catalog-modal">
+    <div class="catalog__modal--title">
+        <p class="catalog__modal--ttl">Select Size</p>
+        <a href="javascript:void(0)" id="catalog-modal--close" class="catalog__modal--close">
+            {{ icons.icon('close') }}
+        </a>
+    </div>
+    <form class="catalog__modal--form">
+        <div class="catalog__modal--sizes">
+            <div class="catalog__modal--onesize">
+                <input type="radio" id="xs" checked name="catalog-modal">
+                <label for="xs" class="js-hovered">1 / XS</label>
+            </div>
+            <div class="catalog__modal--onesize catalog__modal--onesize__disabled">
+                <input type="radio" id="s" disabled  name="catalog-modal">
+                <label for="s"  class="js-hovered">2 / S</label>
+            </div>
+            <div class="catalog__modal--onesize">
+                <input type="radio" id="m"  name="catalog-modal">
+                <label for="m"  class="js-hovered">3 / M</label>
+            </div>
+            <div class="catalog__modal--onesize">
+                <input type="radio" id="l"  name="catalog-modal">
+                <label for="l"  class="js-hovered">4 / L</label>
+            </div>
+            <div class="catalog__modal--onesize">
+                <input type="radio" id="xl"  name="catalog-modal">
+                <label for="xl"  class="js-hovered">5 / XL</label>
+            </div>
+        </div>
+        <div class="catalog__modal-bottom">
+            <div  class="catalog__modal--count">
+                <span id="catalog__modal--minus" class="catalog__modal--minus js-hovered">-</span>
+                <input type="number" value="1" id="catalog__modal--input" class="catalog__modal--input">
+                <span id="catalog__modal--plus" class="catalog__modal--plus js-hovered">+</span>
+            </div>
+            <button class="button--black catalog__modal--button">
+                <span data-splitting>ADD TO BAG</span>
+                <span data-splitting>ADD TO BAG</span>
+            </button>
+        </div>
+    </form>
+</div>

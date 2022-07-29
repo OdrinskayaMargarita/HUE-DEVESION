@@ -1,0 +1,24 @@
+---
+title: Account Addresses
+description: Account Addresses
+pageName: accountPage
+---
+{% import "data/_data-account.twig" as dataAccount %}
+
+{% extends 'layouts/_page-default.twig' %}
+{% import "mixins/_underline-link.twig" as underlines %}
+{% import "mixins/_light-link.twig" as lights %}
+
+{% block content %}
+    <main>
+        <section class="account">
+            <div class="container">
+                <div class="account__wrapper">
+                    {% include "pages/account/_head.twig" %}
+                    {% include "pages/account/_navbar.twig" %}
+                    {% include "pages/account/_addresses.twig" %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

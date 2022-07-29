@@ -1,0 +1,178 @@
+<section class="pdp">
+    <div class="pdp__banner">
+        <div class="pdp__image">
+            <div class="pdp__slider-container">
+                <div class="swiper-container" id="swiper-pdp">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="media-wrap">
+                                <img src="img/pdp/pdp1.jpg" alt="img">
+                            </div>
+                            <div class="pdp-img-descr">
+                                <div>
+                                    <p>Hue</p>
+                                    <p class="pdp-img-descr--big">098</p>
+                                </div>
+                                <div>
+                                    <p>Lightness</p>
+                                    <p class="pdp-img-descr--big">59</p>
+                                </div>
+                                <div>
+                                    <p>chroma</p>
+                                    <p class="pdp-img-descr--big">30</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="media-wrap js-video-wrap">
+                                <video class="plyr__video js-player" playsinline controls>
+                                    <source src="video/homepage/hero.mp4" type="video/mp4"/>
+                                    <source src="video/homepage/hero.webm" type="video/webm"/>
+                                </video>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="media-wrap">
+                                <img src="img/pdp/pdp3.jpg" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="media-wrap">
+                                <img src="img/pdp/pdp2.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next swiper-button">
+                        {{ icons.icon('caret-right') }}
+                    </div>
+                    <div class="swiper-button-prev swiper-button">
+                        {{ icons.icon('caret-left') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdp__description">
+            <div class="pdp__description--inner">
+                <div class="pdp__price-like">
+                    <div class="pdp__price--all">
+                        <p class="pdp__price--all__discount">$129</p>
+                        <p>$99</p>
+                    </div>
+                    <form>
+                        <button class="catalog__item--button add-to-fav">
+                            {{ icons.icon('heart') }}
+                        </button>
+                    </form>
+                </div>
+                <p class="pdp__title">Classics Blue Unisex Organic & Recycled Cotton Sweatpants</p>
+                <p class="pdp__txt">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea
+                    commodo consequat. <a href="javascript: void(0)" id="js-more-details">More details</a></p>
+                <form class="pdp__form">
+                    <p class="pdp__code-color">Hue: 098</p>
+                    <div class="pdp__colours" id="pdp__colours">
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="white" name="pdp-colour" data-colour="#ffffff">
+                            <label for="white" class="js-hovered"><span style="background-color: #ffffff"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="pink" name="pdp-colour" data-colour="#FF94E1" checked>
+                            <label for="pink" class="js-hovered"><span style="background-color: #FF94E1"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="purple" name="pdp-colour" data-colour="#E8A8FF">
+                            <label for="purple" class="js-hovered"><span style="background-color:#E8A8FF"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="green" name="pdp-colour" data-colour="#4FC684">
+                            <label for="green" class="js-hovered"><span style="background-color: #4FC684"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="blue" name="pdp-colour" disabled data-colour="#76E0FB">
+                            <label for="blue" class="js-hovered"><span style="background-color:#76E0FB"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="red" name="pdp-colour" data-colour="#FD6262">
+                            <label for="red" class="js-hovered"><span style="background-color: #FD6262"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="darkblue" name="pdp-colour" data-colour="#0777C3">
+                            <label for="darkblue" class="js-hovered"><span style="background-color: #0777C3"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="violet" name="pdp-colour" data-colour="#866DD5">
+                            <label for="violet" class="js-hovered"><span style="background-color:  #866DD5"></span></label>
+                        </div>
+                        <div class="pdp__colour-item">
+                            <input type="radio" id="multicolor" name="pdp-colour" data-colour="#866DD5">
+                            <label for="multicolor" class="js-hovered"><img src="img/pdp/multicolor.svg"></label>
+                        </div>
+                    </div>
+                    <div class="pdp__size-chart">
+                        <div class="catalog__modal--sizes">
+                            <div class="catalog__modal--onesize js-hovered">
+                                <input type="radio" id="pdp-xs" checked name="catalog-modal">
+                                <label for="pdp-xs" class="js-hovered">1 / XS</label>
+                            </div>
+                            <div class="catalog__modal--onesize catalog__modal--onesize__disabled ">
+                                <input type="radio" id="pdp-s" disabled name="catalog-modal">
+                                <label for="pdp-s" class="js-hovered">2 / S</label>
+                                <span class="tooltiptext">out of stock</span>
+                            </div>
+                            <div class="catalog__modal--onesize js-hovered">
+                                <input type="radio" id="pdp-m" name="catalog-modal">
+                                <label for="pdp-m" class="js-hovered">3 / M</label>
+                            </div>
+                            <div class="catalog__modal--onesize js-hovered" >
+                                <input type="radio" id="pdp-l" name="catalog-modal">
+                                <label for="pdp-l" class="js-hovered">4 / L</label>
+                            </div>
+                            <div class="catalog__modal--onesize js-hovered">
+                                <input type="radio" id="pdp-xl" name="catalog-modal">
+                                <label for="pdp-xl" class="js-hovered">5 / XL</label>
+                            </div>
+                        </div>
+                        <div class="catalog__modal--select">
+                            <select class="select-menu" id="select-menu" name="pdp--size">
+                                <option value="0" disabled selected>Choose your size</option>
+                                <option value="1">1 / XS</option>
+                                <option value="2">2 / S</option>
+                                <option value="3">3 / M</option>
+                                <option value="4">4 / L</option>
+                                <option value="5">5 / XL</option>
+                            </select>
+                        </div>
+                        <div class="pdp__size-chart-inner">
+                            <button type="button" role="button" aria-label="Open size chart"
+                                    class="pdp__chart js-modal-btn" data-modal="modal-sizes">
+                                <span>Size chart</span>
+                                {{ icons.icon('size-chart') }}
+                            </button>
+                            <button type="button" role="button" aria-label="Open models measurment"
+                                    class="pdp__models js-modal-btn" data-modal="modal-models">
+                                Model’s measurment
+                            </button>
+                        </div>
+                    </div>
+                    {# catalog__modal-bottom--disabled - if no size #}
+                    <div class="catalog__modal-bottom">
+                        <div class="catalog__modal--count">
+                            <span id="catalog__modal--minus" class="catalog__modal--minus js-hovered">-</span>
+                            <input type="number" value="1" id="catalog__modal--input" class="catalog__modal--input">
+                            <span id="catalog__modal--plus" class="catalog__modal--plus js-hovered">+</span>
+                        </div>
+                        <button class="button--black catalog__modal--button open-basketMenu">
+                            <span data-splitting>ADD TO BAG</span>
+                            <span data-splitting>ADD TO BAG</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="pdp__info">
+                    <img src="img/pdp/klarna.png">
+                    <p>4 interest-free payments of $ 37.25. <a class="javascript:void(0)">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

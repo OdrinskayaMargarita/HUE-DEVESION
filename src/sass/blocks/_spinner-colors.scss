@@ -1,0 +1,173 @@
+$radius: 35.5778vw;
+$radiusTab: 61.42vw;
+$radiusMob: 96.59vw;
+
+.spinner-colors {
+  position: relative;
+  //margin: -300px 0 0 -300px;
+
+  &__active-position {
+    position: absolute;
+    left: -10%;
+    top: 24%;
+
+    @include tablet {
+      left: -7%;
+      top: 25%;
+    }
+
+    @include mobile {
+      left: -10%;
+    }
+
+    .icon_active-color {
+      width: 25.06px;
+      height: 25.06px;
+      fill: $c-gold;
+      stroke: transparent;
+
+      @include mobile {
+        width: 17.97px;
+        height: 17.97px;
+      }
+    }
+  }
+
+  &__random {
+    position: absolute;
+    top: 2.9vw;
+    left: 3vw;
+    z-index: 1;
+    margin-top: 0;
+    width: 29.5778vw;
+    height: 29.5778vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+
+    @include tablet {
+      top: -2vw;
+      left: -2vw;
+      width: $radiusTab;
+      height: $radiusTab;
+    }
+
+    @include mobile {
+      top: 0;
+      left: -3vw;
+      width: $radiusMob;
+      height: $radiusMob;
+    }
+
+    .btn-spin {
+      max-width: 110px;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: $c-gold;
+      pointer-events: all;
+
+      @include mobile {
+        max-width: 83.28px;
+        font-size: 18.1988px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 1vw;
+    position: relative;
+    width: $radius;
+    height: $radius;
+    border-radius: 100%;
+    overflow: hidden;
+    mask-image: radial-gradient(circle at 50% 50%,transparent 0,transparent 60%,#000 0%,#000 100%,transparent 100%,transparent);
+    transform: rotate(135deg);
+    pointer-events: none;
+
+    @include tablet {
+      margin-top: 17vw;
+      width: $radiusTab;
+      height: $radiusTab;
+    }
+
+    @include mobile {
+      margin-top: 0;
+      width: $radiusMob;
+      height: $radiusMob;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: $radius/2;
+    left: $radius/2;
+    display: block;
+    width: $radius;
+    height: $radius;
+    transform-origin: top left;
+    overflow: hidden;
+    pointer-events: all;
+
+    @include tablet {
+      top: $radiusTab/2;
+      left: $radiusTab/2;
+      width: $radiusTab;
+      height: $radiusTab;
+    }
+
+    @include mobile {
+      top: $radiusMob/2;
+      left: $radiusMob/2;
+      width: $radiusMob;
+      height: $radiusMob;
+    }
+
+    &:nth-child(1) {
+      clip-path: polygon(0 0, 100% 100%, 0% 100%);
+      z-index: 1;
+    }
+
+    &:nth-child(2) {
+      transform: rotate((360deg/8) * 2);
+    }
+
+    &:nth-child(3) {
+      transform: rotate((360deg/8) * 3);
+    }
+
+    &:nth-child(4) {
+      transform: rotate((360deg/8) * 4);
+    }
+
+    &:nth-child(5) {
+      transform: rotate((360deg/8) * 5);
+    }
+
+    &:nth-child(6) {
+      transform: rotate((360deg/8) * 6);
+    }
+
+    &:nth-child(7) {
+      transform: rotate((360deg/8) * 7);
+    }
+
+    &:nth-child(8) {
+      clip-path: polygon(0 0, 100% 100%, 0% 100%);
+      transform: rotate(-45deg);
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+
+      //&:checked {
+      //  background-color: red;
+      //}
+    }
+  }
+}

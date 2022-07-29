@@ -1,0 +1,8 @@
+{% import "mixins/_icons.twig" as icons %}
+
+{% macro buttonBack(name, class) %}
+    <button type="button" role="button" aria-label="go back" class="{{ class }}__button btn-back js-back">
+        {{ icons.icon('caret-left') }}
+        <span class="name">{{ name }}</span>
+    </button>
+{% endmacro %}

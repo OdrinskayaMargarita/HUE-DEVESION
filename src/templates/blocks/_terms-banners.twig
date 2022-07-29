@@ -1,0 +1,10 @@
+<section class="terms-banners">
+    <ul class="terms-banners__list terms-list">
+        {% for item in data.termsBanners %}
+            <li class="terms-list__item term" style="background-color: {{ item.color }}">
+                <h4 class="term__title">{{ item.title }}</h4>
+                <p class="term__text">{{ item.text }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

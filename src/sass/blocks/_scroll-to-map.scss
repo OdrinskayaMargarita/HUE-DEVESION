@@ -1,0 +1,23 @@
+.scroll-to-map {
+  margin: auto auto 0;
+  display: block;
+  width: fit-content;
+
+  .icon,
+  .name {
+    pointer-events: none;
+  }
+
+  .icon {
+    margin: 0 auto 20px;
+    display: block;
+    width: 78.9px;
+    height: 77px;
+    //border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .name {
+    font-weight: 500;
+  }
+}

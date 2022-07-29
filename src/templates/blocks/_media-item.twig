@@ -1,0 +1,43 @@
+{% import "mixins/_icons.twig" as icons %}
+
+{% macro mediaItem(item, folder, tag) %}
+    <div class="media-item">
+        <a href="{{ item.href }}" class="media-item__img"
+           {% if tag and tag == 'Press' %}target="_blank"{% endif %}>
+            <img src="img/{{ folder }}/{{ item.src }}" alt="{{ item.name }}">
+            {% if tag %}
+                <span class="tag tag--default">{{ tag }}</span>
+            {% endif %}
+        </a>
+        <div class="media-item__content">
+            <div class="media-item__categories categories">
+                {% for cat in item.categories %}
+                    <a href="{{ cat.href }}" class="categories__item category">
+                        <span class="category__icon icon icon_color" style="background-color: {{ cat.color }}"></span>
+                        <span class="category__name name">{{ cat.name }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+            <h3 class="media-item__title">
+                <a href="{{ item.href }}" {% if tag and tag == 'Press' %}target="_blank"{% endif %}>
+                    {{ item.name }}
+                </a>
+            </h3>
+            {% if item.text %}
+                <div class="media-item__excerpt">
+                    {{ item.text }}
+                </div>
+            {% endif %}
+{#            <div class="media-item__inner">#}
+                <div class="media-item__author">
+                    <span>by {{ item.author }}</span>
+                </div>
+                <div class="media-item__reading-time">
+                    {{ icons.icon('book') }}
+                    <span>{{ item.time }} min read</span>
+                </div>
+{#            </div>#}
+
+        </div>
+    </div>
+{% endmacro %}

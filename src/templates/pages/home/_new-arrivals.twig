@@ -1,0 +1,62 @@
+<section class="arrivals">
+    <div class="container">
+        <div class="arrivals__wrapper js-has-slider has-slider">
+            <div class="arrivals__head has-slider__head">
+                {{ titles.title("New arrivals", "arrivals", "m", "dark", "h2") }}
+
+                <div class="arrivals__navigation has-slider__navigation navigation">
+                    <div class="swiper-pagination"></div>
+                    <div class="line"></div>
+                    <button type="button" role="button" aria-label="prev" class="swiper-button swiper-prev">
+                        {{ icons.icon('caret-left') }}
+                    </button>
+                    <button type="button" role="button" aria-label="next" class="swiper-button swiper-next">
+                        {{ icons.icon('caret-right') }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="arrivals__content has-slider__content">
+                <div class="arrivals__slider has-slider__slider swiper-container">
+                    <div class="arrivals-list slider swiper-wrapper">
+                        {% for item in data.arrivals %}
+                            <div class="arrivals-list__item slide swiper-slide product">
+                                <div class="slide__img product__img">
+                                    <img class="js-img-default"
+                                            src="{{'img/homepage/arrivals/' + item.colors[0].imagesDefault }}" alt="{{ item.colors[0].name }}">
+                                </div>
+                                <div class="slide__content product__content">
+                                    <div class="slide__bg product__bg js-bg"></div>
+
+                                    <form action="" class="slide__fav-form product__fav-form">
+                                        <button type="button" aria-label="favorite" class="slide__fav product__fav add-to-fav">
+                                            {{ icons.icon('fav') }}
+                                        </button>
+                                    </form>
+                                    <div class="slide__name product__name">
+                                        <h3 class="slide__title product__title">
+                                            <a href="{{ item.href }}" class="js-link js-name">
+                                                {{ item.colors[0].name }}
+                                            </a>
+                                        </h3>
+                                        <p class="slide__price product__price">
+                                            {{ item.price }}
+                                        </p>
+                                    </div>
+                                    {% if item.colors %}
+                                        <div class="slide__colors product__colors colors colors--horizontal">
+                                            {% for color in item.colors %}
+                                                {{ radio.radioBtn('colors__item', '', color.color, item.index, true,
+                                                    'img/homepage/arrivals/' + color.imagesDefault, '', color.link, color.name) }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

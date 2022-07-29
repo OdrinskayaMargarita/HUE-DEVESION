@@ -1,0 +1,154 @@
+.discover {
+  width: 100%;
+  height: 62.5vw;
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+
+  @include mobile {
+    height: fit-content;
+    max-height: unset;
+  }
+
+  // general
+  .slide {
+    display: grid;
+
+    &__img,
+    &__content {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &__img {
+      width: 100%;
+      height: 62.5vw;
+      max-height: 100vh;
+      max-height: calc(var(--vh, 1vh) * 100);
+      overflow: hidden;
+
+      @include mobile {
+        height: 137vw;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      //padding: 50px;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $c-white;
+
+      &:hover,
+      .touch & {
+        .slide__hint {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &__name{
+      @include tablet{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      //font-size: 5.556vw;
+      line-height: 1.2;
+
+      @include tablet {
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+    }
+
+    &__hint {
+      opacity: 0;
+      transform: translateY(40%);
+      transition: opacity 800ms ease-in-out, transform 1000ms ease;
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    .navigation {
+      &.is-hidden {
+        display: none;
+      }
+    }
+
+    .swiper-button {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $c-white;
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      @include tablet {
+        display: none;
+      }
+
+      &.swiper-prev {
+        left: 20px;
+      }
+
+      &.swiper-next {
+        right: 20px;
+      }
+
+      &.swiper-button-disabled {
+        opacity: .3;
+        pointer-events: none;
+      }
+
+      .icon {
+        width: 6.5px;
+        height: 11px;
+        fill: transparent;
+        stroke: $c-black;
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  // if slider doesn't init
+  &__list {
+    &:not(.swiper-container-initialized) {
+      .discover-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include mobile {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .navigation {
+        display: none;
+      }
+    }
+  }
+}

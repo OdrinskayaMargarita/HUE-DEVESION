@@ -1,0 +1,181 @@
+.inner-hero {
+  @include mobile {
+    margin-top: 75px;
+  }
+
+  &__wrapper {
+    height: 43.06vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet-plus {
+      height: 620px;
+    }
+
+    @include mobile {
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100vw auto;
+    }
+  }
+
+  &__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+
+  &__bg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    @include mobile {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  &__content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+
+    @include mobile {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    & > .container {
+      flex-grow: 1;
+      display: flex;
+      padding: 0 35px;
+
+      @include mobile {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  &__title.title--l {
+    margin: auto;
+    padding: 100px 0 120px 10px;
+    font-size: 70px;
+    line-height: 85px;
+    text-align: center;
+    letter-spacing: unset;
+
+    @include laptop {
+      font-size: 38px;
+      line-height: 66px;
+    }
+
+    @include mobile {
+      padding: 101px 0 102px;
+      line-height: 1.1;
+    }
+
+    [data-page-name="sustainabilityPage"] & {
+      @include laptop {
+        font-size: 60px;
+      }
+
+      @include tablet-plus {
+        font-size: 46px;
+      }
+
+      @media (max-width: 1000px) {
+        font-size: 38px;
+      }
+
+      @include mobile {
+        padding: 154px 0 155px;
+      }
+    }
+
+    [data-page-name="contactsPage"] & {
+      white-space: nowrap;
+    }
+
+    [data-page-name="aboutPage"] &,
+    [data-page-name="processPage"] & {
+      font-size: 80px;
+      line-height: 88px;
+
+      @include laptop {
+        font-size: 80px;
+        line-height: 88px;
+      }
+    }
+
+    [data-page-name="aboutPage"] & {
+      @include tablet {
+        font-size: 60px;
+        line-height: 66px;
+      }
+
+      @include mobile {
+        padding: 134px 0 135px;
+      }
+    }
+
+    [data-page-name="processPage"] & {
+      @include tablet {
+        font-size: 60px;
+        line-height: 66px;
+      }
+
+      @include mobile {
+        padding: 121px 0 122px;
+      }
+    }
+
+    [data-page-name="contactsPage"] & {
+      @include laptop {
+        font-size: 70px;
+        line-height: 85px;
+      }
+
+      @include tablet {
+        font-size: 60px;
+        line-height: 88px;
+      }
+
+      @include mobile {
+        padding: 154px 0 155px;
+        line-height: 66px;
+      }
+    }
+
+    [data-page-name="colorBringsPage"] & {
+      font-size: 80px;
+      line-height: 88px;
+
+      @include laptop {
+        font-size: 70px;
+        line-height: 85px;
+      }
+
+      @include tablet-plus {
+        //margin-left: -20px;
+        font-size: 60px;
+        line-height: 66px;
+      }
+
+      @include mobile {
+        margin-left: auto;
+        font-size: 47px;
+        line-height: 51px;
+      }
+    }
+  }
+}

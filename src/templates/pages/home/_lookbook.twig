@@ -1,0 +1,23 @@
+<section class="lookbook">
+    <div class="container">
+        <div class="lookbook__content">
+            {{ titles.title("Summer LOOKBOOK 2021", "lookbook", "m", "red", "h2") }}
+
+            <div class="lookbook__slider swiper-container">
+                <div class="lookbook-list slider swiper-wrapper">
+                    {% for item in data.lookbook %}
+                        <div class="lookbook-list__item slide swiper-slide">
+                            <div class="slide__img">
+                                <img class="js-hovered" src="img/homepage/lookbook/{{ item.src }}"
+                                     alt="{{ item.name }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <a href="#" class="lookbook__link link-theme link-theme--m link-theme--red">
+                view Lookbook
+            </a>
+        </div>
+    </div>
+</section>

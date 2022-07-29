@@ -1,0 +1,13 @@
+<section class="anchors js-panel" style="background-color: #4FC684">
+    <div class="container">
+        <nav class="anchors__nav">
+            <ul class="anchors-list">
+                {% for item in dataSustainability.anchors %}
+                    <li class="anchors-list__item">
+                        <a class="anchors-list__link js-anchor" href="#{{ item.href }}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</section>

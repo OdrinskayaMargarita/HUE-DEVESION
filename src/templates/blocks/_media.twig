@@ -1,0 +1,38 @@
+{% import "mixins/_titles.twig" as titles %}
+{% import "mixins/_icons.twig" as icons %}
+{% import "blocks/_media-item.twig" as media %}
+
+{% macro mediaBlock(title, items, bg) %}
+    <section class="media" {% if bg %}style="background-color: {{ bg }}"{% endif %}>
+        <div class="container container--m">
+            <div class="media__wrapper js-has-slider has-slider">
+                <div class="media__head has-slider__head">
+                    {{ titles.title(title, "media", "m", "dark", "h2") }}
+
+                    <div class="media__navigation has-slider__navigation navigation">
+                        <div class="swiper-pagination"></div>
+                        <div class="line"></div>
+                        <button type="button" role="button" aria-label="prev" class="swiper-button swiper-prev">
+                            {{ icons.icon('caret-left') }}
+                        </button>
+                        <button type="button" role="button" aria-label="next" class="swiper-button swiper-next">
+                            {{ icons.icon('caret-right') }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="media__content has-slider__content">
+                    <div class="media__slider has-slider__slider swiper-container">
+                        <div class="media-list slider swiper-wrapper">
+                            {% for item in items %}
+                                <div class="media-list__item slide swiper-slide">
+                                    {{ media.mediaItem(item, 'media') }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}

@@ -1,0 +1,83 @@
+<section class="basket">
+    <div class="container">
+        {{ titles.title("your shopping cart", "contacts", "xs", "dark", "h1") }}
+        <div class="basket__inner">
+            <form action="" class="basket__form form-theme form-theme--cart">
+                <div class="basket__list">
+                    <div class="basket__list--item basket__list--item-title">
+                        <p>Product</p>
+                        <p></p>
+                        <p>Price</p>
+                        <p>Qty.</p>
+                        <p>Total</p>
+                        <p></p>
+                    </div>
+                    <div class="basket__list--item">
+                        <a href="#" class="basket__list--img"><img src="/img/clothes1.jpg"></a>
+                        <a href="#" class="basket__list--title">Classics blue unisex organic & recycled cotton
+                            sweatpants</a>
+                        <p class="basket__list--price"><span>Unit Price</span>$149.00</p>
+                        <div class="catalog__modal--count">
+                            <span id="catalog__modal--minus" class="catalog__modal--minus js-hovered">-</span>
+                            <input type="number" value="1" id="catalog__modal--input" class="catalog__modal--input">
+                            <span id="catalog__modal--plus" class="catalog__modal--plus js-hovered">+</span>
+                        </div>
+                        <p class="basket__list--price"><span>Total</span>$149.00</p>
+                        <button class="basket__list--item-delete">
+                            {{ icons.icon('close') }}
+                        </button>
+                    </div>
+                    <div class="basket__list--item">
+                        <a href="#" class="basket__list--img"><img src="img/pdp/pdp2.png" alt="img"></a>
+                        <a href="#" class="basket__list--title">Illuminating Yellow Organic & Recycled Cotton Hoodie
+                            1 / XS / Illuminating Yellow</a>
+                        <p class="basket__list--price"><span>Unit Price</span>$149.00</p>
+                        <div class="catalog__modal--count">
+                            <span id="catalog__modal--minus" class="catalog__modal--minus js-hovered">-</span>
+                            <input type="number" value="1" id="catalog__modal--input" class="catalog__modal--input">
+                            <span id="catalog__modal--plus" class="catalog__modal--plus js-hovered">+</span>
+                        </div>
+                        <p class="basket__list--price"><span>Total</span>$149.00</p>
+                        <button class="basket__list--item-delete">
+                            {{ icons.icon('close') }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <p class="order-summary__title">Order Summary</p>
+                    <div class="subtotal">
+                        <p class="subtotal__txt">Sub Total</p>
+                        <p class="subtotal__price">$149.00</p>
+                    </div>
+                    <div class="order-summary__description">
+                        <p>Special Instructions</p>
+{#                        <span>Add details about this order...</span>#}
+                        <div class="field-wrap">
+                            <label for="message">Add details about this order...</label>
+                            <textarea id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="pdp__info">
+                        <img src="img/klarna2.png" alt="img">
+                        <p>4 interest-free payments of $ 37.25. <a href="#" target="_blank">Learn More</a></p>
+                    </div>
+                    <button type="button" role="button" aria-label="Update Cart" class="button--black">
+                        <span data-splitting>Update Cart</span>
+                        <span data-splitting>Update Cart</span>
+                    </button>
+                    <button type="submit" role="button" aria-label="Checkout" class="button--black">
+                        <span data-splitting>Checkout</span>
+                        <span data-splitting>Checkout</span>
+                    </button>
+                    <div class="order-summary--continue">
+                        <a href="#">
+                            {{ icons.icon('shop') }}
+                            Continue shopping
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

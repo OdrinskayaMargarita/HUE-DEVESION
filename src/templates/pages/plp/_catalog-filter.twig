@@ -1,0 +1,46 @@
+{% import "data/_data-catalog-filter.twig" as dataFilter %}
+
+<div class="catalog-filter catalog-sort" id="catalog-filter">
+    <div class="catalog-filter__title">
+        <div class="catalog-filter__title--inner">
+            <p>filter</p>
+            <button id="catalog-filter__clear">Clear All</button>
+        </div>
+        <button type="button" role="button" aria-label="Close"
+                id="catalog-filter--close" class="catalog-filter__close">
+            {{ icons.icon('close') }}
+        </button>
+    </div>
+
+    <form class="catalog-filter__form">
+        {% for filter in dataFilter.filters %}
+            <div class="catalog-filter__list js-catalog-filter">
+                <p class="catalog-filter__subtitle">{{ filter.title }} <span class="js-count"></span></p>
+                <div class="catalog-filter-list">
+                    {% for item in filter.items %}
+                        <label class="catalog-filter-list__item js-item {% if loop.index > 8 %}is-hidden{% endif %}">
+                            <input id="{{ item.id }}" class="checkbox js-checkbox" type="checkbox" name="{{ filter.name }}">
+                            {% if item.color %}
+                                <span class="catalog-filter-list__icon js-hovered" style="background:{{item.color}}"></span>
+                            {% endif %}
+                            <span class="name">{{ item.val }}</span>
+                            <span class="icon-check"></span>
+                        </label>
+                    {% endfor %}
+                </div>
+                {% if filter.items.length > 8%}
+                    <button type="button" role="button" aria-label="Load more"
+                            class="catalog-filter__button js-more">
+                        <span>Load more +</span>
+                        <span>Hide -</span>
+                    </button>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <button class="button--black">
+            <span data-splitting>apply Filter</span>
+            <span data-splitting>apply Filter</span>
+        </button>
+    </form>
+</div>

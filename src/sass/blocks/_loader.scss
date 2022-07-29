@@ -1,0 +1,113 @@
+//.loader {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  z-index: 10000;
+//  width: 100%;
+//  height: 100%;
+//  height: calc(var(--vh, 1vh) * 100);
+//  background-color: $c-white;
+//
+//  .is-loaded & {
+//    .dot {
+//      opacity: 1 !important;
+//    }
+//  }
+//
+//  &__wrapper {
+//    width: 100%;
+//    height: 100%;
+//    display: grid;
+//  }
+//
+//  &__dots,
+//  &__logo {
+//    grid-column: 1/2;
+//    grid-row: 1/2;
+//    margin: auto;
+//  }
+//
+//  &__dots {
+//    position: relative;
+//    width: 89.5834vw;
+//    display: grid;
+//    grid-template-columns: repeat(9, 1fr);
+//
+//    @include tablet {
+//      width: 70vw;
+//    }
+//
+//    @include mobile {
+//      width: 50.93vw;
+//    }
+//  }
+//
+//  .dot {
+//    position: relative;
+//    z-index: 1;
+//    margin: 0 auto;
+//    width: 6.3882vw;
+//    height: 6.3882vw;
+//    border-radius: 50%;
+//    overflow: hidden;
+//    transform-origin: center;
+//    transition: opacity 300ms;
+//
+//    @include tablet {
+//      width: 5.4vw;
+//      height: 5.4vw;
+//    }
+//
+//    @include mobile {
+//      width: 3.91vw;
+//      height: 3.91vw;
+//    }
+//
+//    &.is-centered {
+//      .dot__gradient {
+//        opacity: 1;
+//      }
+//    }
+//
+//    &__color,
+//    &__gradient {
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      width: 100%;
+//      height: 100%;
+//      border-radius: 50%;
+//    }
+//
+//    &__color {
+//      z-index: 1;
+//    }
+//
+//    &__gradient {
+//      z-index: 2;
+//      background: conic-gradient(from 180deg at 50% 50%, #FCE147 -5.31deg, #0777C3 29.54deg, #76E0FB 102.6deg, #4FC684 151.7deg, #E8A8FF 174.93deg, #FF94E1 208.62deg, #FD6262 261.11deg, $c-thumb 322.15deg, #FCE147 354.69deg, #0777C3 389.54deg), linear-gradient(180deg, $c-thumb 0%, rgba(255, 127, 66, 0) 100%);;
+//      background-size: cover;
+//      opacity: 0;
+//      transition: opacity 500ms;
+//    }
+//  }
+//
+//  &__logo {
+//    z-index: 1;
+//    width: 28.334vw;
+//    opacity: 0;
+//
+//    @include tablet {
+//      width: 46.41vw;
+//    }
+//
+//    @include mobile {
+//      width: 50.89vw;
+//    }
+//
+//    img {
+//      width: 100%;
+//      height: auto;
+//    }
+//  }
+//}

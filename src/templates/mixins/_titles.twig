@@ -1,0 +1,9 @@
+{% macro title(text, parentSelector, size, color, tag) %}
+    <{% if tag %}{{ tag }}{% else %}h2{% endif %} class="{% if parentSelector %} {{ parentSelector }}__title {% endif %}
+            title title--{{ size }} {% if color %} title--{{ color }} {% endif %}">
+        {{ text | safe }}
+    </{% if tag %}{{ tag }}{% else %}h2{% endif %}>
+{% endmacro %}
+
+{#usage#}
+{#{{ titles.title("Try Restream For Free", "hero", "xl") }}#}

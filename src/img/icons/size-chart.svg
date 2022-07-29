@@ -1,0 +1,13 @@
+<svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1" fill="white">
+<rect x="8" width="21" height="8" rx="1" transform="rotate(90 8 0)"/>
+</mask>
+<rect x="8" width="21" height="8" rx="1" transform="rotate(90 8 0)" stroke="black" stroke-width="3" mask="url(#path-1-inside-1)"/>
+<line x1="1" y1="4.25" x2="4" y2="4.25" stroke="black" stroke-width="1.5"/>
+<line x1="1" y1="8.25" x2="4" y2="8.25" stroke="black" stroke-width="1.5"/>
+<line x1="1" y1="12.25" x2="4" y2="12.25" stroke="black" stroke-width="1.5"/>
+<line x1="1" y1="16.25" x2="4" y2="16.25" stroke="black" stroke-width="1.5"/>
+<line x1="15.7501" y1="4" x2="15.7501" y2="17" stroke="black" stroke-width="1.5"/>
+<path d="M13.0001 7L15.5001 4L18.0001 7" stroke="black" stroke-width="1.5"/>
+<path d="M17.9999 14L15.4999 17L12.9999 14" stroke="black" stroke-width="1.5"/>
+</svg>

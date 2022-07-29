@@ -1,0 +1,17 @@
+[data-src] {
+  opacity: 0;
+  transition: opacity;
+
+  &[src] {
+    opacity: 1;
+  }
+}
+
+[data-srcset] {
+  opacity: 0;
+  transition: opacity;
+
+  &[srcset] {
+    opacity: 1;
+  }
+}

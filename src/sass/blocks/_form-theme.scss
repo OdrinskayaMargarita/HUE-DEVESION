@@ -1,0 +1,203 @@
+$all-text-inputs: 'input[type="email"], input[type="number"], input[type="password"], input[type="search"], input [type="tel"], input [type="text"], input [type="url"], input [type="color"], input [type="date"], input [type="datetime"], input [type="datetime-local"], input [type="month"], input [type="time"], input [type="week"], textarea ';
+
+#{$all-text-inputs} {
+  display: flex;
+  width: 100%;
+  height: 36px;
+  padding: 0;
+  font-family: $font;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $c-black;
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: $c-black;
+  transition: border-bottom-color 300ms ease;
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5; // fix for safari
+  }
+
+}
+
+// form theme styling {
+.form-theme {
+  .style-select {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    font-family: $font;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $c-black;
+    border: none;
+    border-bottom: 1px solid;
+    border-bottom-color: $c-black;
+    transition: border-bottom-color 300ms ease;
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: 0.5; // fix for safari
+    }
+  }
+
+  textarea {
+    padding-top: .3em;
+    height: 117px;
+    resize: none;
+    overflow: auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    .txt-error {
+      opacity: 0;
+      transition: 500ms;
+      position: absolute;
+      top: calc(100% + 5px);
+      color: red;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: left;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &.has-error {
+      &-short {
+        .txt-error-short {
+          opacity: 1;
+        }
+
+        .field-wrap {
+          label {
+            color: $c-red;
+          }
+        }
+
+        .txt-error {
+          opacity: 1;
+        }
+
+        #{$all-text-inputs},
+        .style-select {
+          border-bottom-color: $c-red;
+        }
+      }
+
+      .field-wrap {
+        label {
+          color: $c-red;
+        }
+
+        input[type=text] {
+          border-bottom-color: $c-red;
+        }
+      }
+
+      .txt-error {
+        opacity: 1;
+      }
+
+      #{$all-text-inputs},
+      .style-select {
+        border-bottom-color: $c-red;
+      }
+    }
+  }
+
+  .field-wrap {
+    flex-grow: 1;
+    position: relative;
+    padding-top: 0;
+    transition: padding-top 300ms ease;
+
+    input[type="text"] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 36px;
+      padding: 0;
+      font-family: Montserrat, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: .02em;
+      color: #000;
+      border: 0;
+      border-bottom: 1px solid;
+      border-bottom-color: #000;
+      -webkit-transition: border-bottom-color 300ms ease;
+      -o-transition: border-bottom-color 300ms ease;
+      transition: border-bottom-color 300ms ease;
+    }
+
+    &.has-checkbox {
+      position: relative;
+
+      label {
+        padding-left: 33px;
+        display: flex;
+        pointer-events: none;
+
+        &::before {
+          @include pseudo();
+          top: 2px;
+          left: 0;
+          width: 19px;
+          height: 19px;
+          background-color: transparent;
+          border: 1px solid $c-black;
+          @include anim();
+        }
+      }
+
+      input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        &:checked + label {
+          &::before {
+            background-color: $c-black;
+          }
+        }
+      }
+    }
+
+    &.has-focused:not(.has-checkbox),
+    &.has-filled:not(.has-checkbox) {
+      padding-top: 30px;
+
+      label {
+        opacity: .5;
+      }
+    }
+
+    label:not(.checkbox) {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 100%;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.02em;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 300ms ease, color 300ms ease;
+    }
+  }
+}

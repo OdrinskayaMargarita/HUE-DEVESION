@@ -1,0 +1,13 @@
+{% macro radioBtn(class, id, color, selector, icon, img, imgHover, link, name, label) %}
+    <label for="{{ id }}"
+           class="radio {{ class }} js-radio js-hovered" {% if icon == false %} style="background-color: {{ color }}" {% endif %}
+           data-color="{{ color }}"
+            {% if img %}data-img="{{ img }}"{% endif %}
+            {% if imgHover %}data-imgHover="{{ imgHover }}"{% endif %}
+            {% if link %}data-href="{{ link }}"{% endif %}
+            {% if name %}data-name="{{ name }}"{% endif %}>
+        <input id="{{ id }}" class="radio__input js-radio-input" type="radio" name="radio-{{ selector }}">
+        {% if icon %}<span class="radio__icon icon js-icon" style="background-color: {{ color }}"></span>{% endif %}
+        {% if label %}<span class="radio__name name js-radio-name">{{ label }}</span>{% endif %}
+    </label>
+{% endmacro %}

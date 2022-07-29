@@ -1,0 +1,36 @@
+.add-to-fav{
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+
+  &:not(.fav-ok) {
+    .no-touch &:hover {
+      .icon {
+        fill: $c-white;
+      }
+    }
+  }
+
+  &.fav-ok {
+    .icon {
+      fill: red;
+      stroke: red;
+    }
+
+    .no-touch &:hover {
+      .icon {
+        stroke: $c-white;
+      }
+    }
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    fill: transparent;
+    stroke: $c-black;
+    stroke-width: 2px;
+    @include anim();
+  }
+}

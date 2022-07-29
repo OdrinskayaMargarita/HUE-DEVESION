@@ -1,0 +1,145 @@
+.hero {
+  position: relative;
+
+  $this: &;
+
+  .media-wrap {
+    position: relative;
+    overflow: hidden;
+
+    img,
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__wrapper {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet-plus {
+      height: fit-content;
+      min-height: unset;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__left {
+    @include tablet-plus {
+      height: 71.4628vw;
+    }
+
+    @include mobile {
+      height: 543px;
+    }
+  }
+
+  &__right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    @include mobile {
+      height: 624px;
+      grid-template-rows: 2fr 1fr;
+    }
+
+    #{$this}__bg {
+      grid-column: 1/2;
+
+      &.color--1 {
+        grid-row: 1/2;
+      }
+
+      &.color--2 {
+        grid-row: 2/3;
+      }
+    }
+
+    .media-wrap {
+      z-index: 10;
+      grid-column: 1/2;
+      grid-row: 1/3;
+      margin: auto;
+      width: 29.93vw;
+      height: 0;
+      padding-bottom: 74.723%;
+
+      @include tablet-plus {
+        width: 325px;
+        height: 400px;
+        margin: 16vw auto 60px;
+        padding-bottom: 0;
+      }
+
+      @include mobile {
+        margin-top: 124px;
+      }
+    }
+  }
+
+  .marquee {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translateY(-50%);
+
+    @include tablet-plus {
+      top: 60.7vw;
+      left: 50%;
+      z-index: 10;
+      max-width: 755px;
+      text-align: center;
+      white-space: unset;
+      transform: translateX(-50%);;
+    }
+
+    @include mobile {
+      top: 442px;
+      max-width: 373px;
+    }
+
+    &__item {
+      display: inline-block;
+      padding-right: 20px;
+
+      @include tablet-plus {
+        padding: 0;
+        //animation: none;
+      }
+
+      &:not(:first-child) {
+        @include tablet-plus {
+          display: none;
+        }
+      }
+
+      .is-loaded & {
+        animation: marquee 13s linear infinite;
+
+        @include tablet-plus {
+          animation: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,328 @@
+{% import "mixins/_icons.twig" as icons %}
+
+{# cards templates from the plp page #}
+{% macro catalogItems(cut) %}
+    <div class="catalog__item">
+        <span class="catalog__item--sale">sale</span>
+        <form>
+            <button class="catalog__item--button add-to-fav">
+                {{ icons.icon('heart') }}
+            </button>
+            <div class="catalog__item--img">
+                <button class="catalog__item--buy button--white">
+                    <span data-splitting>add to bag</span>
+                    <span data-splitting>add to bag</span>
+                </button>
+                <div class="catalog__item--img-all">
+                    <a class="catalog__item--img-one catalog__item--img-one--active" href="pdp.html"
+                       style="background-color:#9A86D9" data-colour="item1-1">
+                        <img src="img/plp/catalog-item-2.png">
+                    </a>
+                    <a class="catalog__item--img-one" href="pdp.html" style="background-color:#348ECB"
+                       data-colour="item1-2">
+                        <img src="img/plp/catalog-item-3.png">
+                    </a>
+                    <a class="catalog__item--img-one" href="pdp.html" style="background-color:#FF7A5D"
+                       data-colour="item1-3">
+                        <img src="img/plp/catalog-item-3.png">
+                    </a>
+                    <a class="catalog__item--img-one" href="pdp.html" style="background-color:#FFAECB"
+                       data-colour="item1-4">
+                        <img src="img/plp/catalog-item-3.png">
+                    </a>
+                    <a class="catalog__item--img-one" href="pdp.html" style="background-color:#FCE147"
+                       data-colour="item1-5">
+                        <img src="img/plp/catalog-item-3.png">
+                    </a>
+                </div>
+                <ul class="catalog__item--pagination">
+                    <a href="javascript: void(0)" class="catalog__item--pagination__more">+5</a>
+                    <li>
+                        <input type="radio" id="item1-4" name="item1">
+                        <label class="js-hovered" for="item1-4"><span
+                                    style="background-color: #FFAECB"></span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="item1-3" name="item1">
+                        <label class="js-hovered" for="item1-3"><span
+                                    style="background-color: #FF7A5D"></span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="item1-2" name="item1">
+                        <label class="js-hovered" for="item1-2"><span
+                                    style="background-color: #348ECB"></span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="item1-1" name="item1" checked>
+                        <label class="js-hovered" for="item1-1"><span
+                                    style="background-color: #9A86D9"></span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="item1-5" name="item1">
+                        <label class="js-hovered" for="item1-5"><span
+                                    style="background-color: #FCE147"></span></label>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="catalog__item--title">
+                <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                    Sweatpants</a>
+            </h3>
+            <p class="catalog__item--price"><span class="catalog__item--price-old">$159</span>$129</p>
+        </form>
+    </div>
+    <div class="catalog__item">
+        <form>
+            <button class="catalog__item--button add-to-fav">
+                {{ icons.icon('heart') }}
+            </button>
+            <div class="catalog__item--img">
+                <button class="catalog__item--buy button--white">
+                    <span data-splitting>add to bag</span>
+                    <span data-splitting>add to bag</span>
+                </button>
+                <div class="catalog__item--img-all">
+                    <a class="catalog__item--img-one" href="pdp.html" style="background-color:#9A86D9"
+                       data-colour="item2-2">
+                        <img src="img/plp/catalog-item-2.png">
+                    </a>
+                    <a class="catalog__item--img-one  catalog__item--img-one--active" href="pdp.html"
+                       style="background-color:#348ECB" data-colour="item2-1">
+                        <img src="img/plp/catalog-item-3.png">
+                    </a>
+                </div>
+                <ul class="catalog__item--pagination">
+                    <li>
+                        <input type="radio" id="item2-1" checked name="item2">
+                        <label class="js-hovered" for="item2-1"><span
+                                    style="background-color: #348ECB"></span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="item2-2" name="item2">
+                        <label class="js-hovered" for="item2-2"><span
+                                    style="background-color: #9A86D9"></span></label>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="catalog__item--title">
+                <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                    Sweatpants</a>
+            </h3>
+            <p class="catalog__item--price">$129</p>
+        </form>
+    </div>
+    <div class="catalog__item">
+        <form>
+            <button class="catalog__item--button add-to-fav fav-ok">
+                {{ icons.icon('heart') }}
+            </button>
+            <div class="catalog__item--img">
+                <button class="catalog__item--buy button--white">
+                    <span data-splitting>add to bag</span>
+                    <span data-splitting>add to bag</span>
+                </button>
+                <div class="catalog__item--img-all">
+                    <a class="catalog__item--img-one catalog__item--img-one--active" href="pdp.html"
+                       style="background-color:#E9E8E9" data-colour="item3-1">
+                        <img src="img/plp/catalog-item-1.jpg">
+                    </a>
+                </div>
+                <ul class="catalog__item--pagination">
+                    <li>
+                        <input type="radio" id="item3-1" checked>
+                        <label for="item3-1" class="js-hovered"><span
+                                    style="background-color: #3DB171"></span></label>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="catalog__item--title">
+                <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                    Sweatpants</a>
+            </h3>
+            <p class="catalog__item--price">$129</p>
+        </form>
+    </div>
+    <div class="catalog__item catalog__item--sold-out">
+        <form>
+            <button class="catalog__item--button add-to-fav">
+                {{ icons.icon('heart') }}
+            </button>
+            <div class="catalog__item--img">
+                <button class="catalog__item--buy button--white">
+                    <span data-splitting>add to bag</span>
+                    <span data-splitting>add to bag</span>
+                </button>
+                <a class="catalog__item--img-one catalog__item--img-one--active" href="pdp.html"
+                   style="background-color:#E9E8E9">
+                    <img src="img/plp/catalog-item-1.jpg">
+                </a>
+                <span class="sold-out">Sold out</span>
+            </div>
+            <h3 class="catalog__item--title">
+                <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                    Sweatpants
+                </a>
+            </h3>
+            <p class="catalog__item--price">$129</p>
+        </form>
+    </div>
+    {% if cut == 'false' %}
+        <div class="catalog__item">
+            <span class="catalog__item--sale">sale</span>
+            <form>
+                <button class="catalog__item--button add-to-fav">
+                    {{ icons.icon('heart') }}
+                </button>
+                <div class="catalog__item--img">
+                    <button class="catalog__item--buy button--white">
+                        <span data-splitting>add to bag</span>
+                        <span data-splitting>add to bag</span>
+                    </button>
+                    <div class="catalog__item--img-all">
+                        <a class="catalog__item--img-one catalog__item--img-one--active" href="pdp.html"
+                           style="background-color:#9A86D9" data-colour="item1-1">
+                            <img src="img/plp/catalog-item-2.png">
+                        </a>
+                        <a class="catalog__item--img-one" href="pdp.html" style="background-color:#348ECB"
+                           data-colour="item1-2">
+                            <img src="img/plp/catalog-item-3.png">
+                        </a>
+                        <a class="catalog__item--img-one" href="pdp.html" style="background-color:#FF7A5D"
+                           data-colour="item1-3">
+                            <img src="img/plp/catalog-item-3.png">
+                        </a>
+                        <a class="catalog__item--img-one" href="pdp.html" style="background-color:#FFAECB"
+                           data-colour="item1-4">
+                            <img src="img/plp/catalog-item-3.png">
+                        </a>
+                    </div>
+                    <ul class="catalog__item--pagination">
+                        <li>
+                            <input type="radio" id="item1-4" name="item1">
+                            <label class="js-hovered" for="item1-4"><span
+                                        style="background-color: #FFAECB"></span></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="item1-3" name="item1">
+                            <label class="js-hovered" for="item1-3"><span
+                                        style="background-color: #FF7A5D"></span></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="item1-2" name="item1">
+                            <label class="js-hovered" for="item1-2"><span
+                                        style="background-color: #348ECB"></span></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="item1-1" name="item1" checked>
+                            <label class="js-hovered" for="item1-1"><span
+                                        style="background-color: #9A86D9"></span></label>
+                        </li>
+                    </ul>
+                </div>
+                <h3 class="catalog__item--title">
+                    <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                        Sweatpants
+                    </a>
+                </h3>
+                <p class="catalog__item--price"><span class="catalog__item--price-old">$159</span>$129</p>
+            </form>
+        </div>
+        <div class="catalog__item">
+            <form>
+                <button class="catalog__item--button add-to-fav">
+                    {{ icons.icon('heart') }}
+                </button>
+                <div class="catalog__item--img">
+                    <button class="catalog__item--buy button--white">
+                        <span data-splitting>add to bag</span>
+                        <span data-splitting>add to bag</span>
+                    </button>
+                    <div class="catalog__item--img-all">
+                        <a class="catalog__item--img-one" href="#" style="background-color:#9A86D9"
+                           data-colour="item2-2">
+                            <img src="img/plp/catalog-item-2.png">
+                        </a>
+                        <a class="catalog__item--img-one  catalog__item--img-one--active" href="pdp.html"
+                           style="background-color:#348ECB" data-colour="item2-1">
+                            <img src="img/plp/catalog-item-3.png">
+                        </a>
+                    </div>
+                    <ul class="catalog__item--pagination">
+                        <li>
+                            <input type="radio" id="item2-1" checked name="item2">
+                            <label class="js-hovered" for="item2-1"><span
+                                        style="background-color: #348ECB"></span></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="item2-2" name="item2">
+                            <label class="js-hovered" for="item2-2"><span
+                                        style="background-color: #9A86D9"></span></label>
+                        </li>
+                    </ul>
+                </div>
+                <h3 class="catalog__item--title">
+                    <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                        Sweatpants
+                    </a>
+                </h3>
+                <p class="catalog__item--price">$129</p>
+            </form>
+        </div>
+        <div class="catalog__item">
+            <form>
+                <button class="catalog__item--button add-to-fav fav-ok">
+                    {{ icons.icon('heart') }}
+                </button>
+                <div class="catalog__item--img">
+                    <button class="catalog__item--buy button--white">
+                        <span data-splitting>add to bag</span>
+                        <span data-splitting>add to bag</span>
+                    </button>
+                    <div class="catalog__item--img-all">
+                        <a class="catalog__item--img-one catalog__item--img-one--active" href="pdp.html"
+                           style="background-color:#E9E8E9" data-colour="item3-1">
+                            <img src="img/plp/catalog-item-1.jpg">
+                        </a>
+                    </div>
+                    <ul class="catalog__item--pagination">
+                        <li>
+                            <input type="radio" id="item3-1" checked>
+                            <label for="item3-1" class="js-hovered"><span
+                                        style="background-color: #3DB171"></span></label>
+                        </li>
+                    </ul>
+                </div>
+                <h3 class="catalog__item--title">
+                    <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                        Sweatpants
+                    </a>
+                </h3>
+                <p class="catalog__item--price">$129</p>
+            </form>
+        </div>
+        <div class="catalog__item catalog__item--sold-out">
+            <form>
+                <button class="catalog__item--button add-to-fav">
+                    {{ icons.icon('heart') }}
+                </button>
+                <div class="catalog__item--img">
+                    <button class="catalog__item--buy button--white">
+                        <span data-splitting>add to bag</span>
+                        <span data-splitting>add to bag</span>
+                    </button>
+                    <a class="catalog__item--img-one catalog__item--img-one--active" href="pdp.html"
+                       style="background-color:#E9E8E9">
+                        <img src="img/plp/catalog-item-1.jpg">
+                    </a>
+                    <span class="sold-out">Sold out</span>
+                </div>
+                <h3 class="catalog__item--title">
+                    <a href="pdp.html">Classics Blue Unisex Organic & Recycled Cotton
+                        Sweatpants
+                    </a>
+                </h3>
+                <p class="catalog__item--price">$129</p>
+            </form>
+        </div>
+    {% endif %}
+{% endmacro %}

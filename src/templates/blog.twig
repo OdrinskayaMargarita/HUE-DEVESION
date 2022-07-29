@@ -1,0 +1,14 @@
+---
+title: Blog
+description: Blog
+pageName: blogPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+
+{% block content %}
+    <main>
+        {% include "pages/blog/_hero.twig" %}
+        {% include "pages/blog/_articles.twig" %}
+    </main>
+{% endblock %}

@@ -1,0 +1,88 @@
+.plp {
+  position: relative;
+
+  &::before {
+    @include pseudo();
+    top: -50px;
+    left: 50%;
+    z-index: 3;
+    width: 110.14%;
+    height: 280px;
+    background: url("../img/blur-blog.png") no-repeat center;
+    background-size: cover;
+    transform: translateX(-50%);
+
+    @include tablet {
+      height: 200px;
+    }
+  }
+
+  .container {
+    position: unset;
+  }
+}
+
+.plp__banner {
+  margin-bottom: 99px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 104px;
+  }
+
+  &-img {
+    height: auto;
+
+    &--left {
+      margin-right: -10.41vw;
+      width: 39.9166vw;
+
+      @include tablet {
+        margin-top: -15px;
+        margin-right: -12.41vw;
+        width: 45.25vw;
+      }
+
+      @include mobile {
+        width: 71.25vw;
+      }
+    }
+
+    &--center {
+      margin-top: -15px;
+      z-index: 2;
+      width: 39.4444vw;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+
+      @include tablet {
+        margin-top: 0;
+        width: 45.73vw;
+      }
+
+      @include mobile {
+        width: 69.0667vw;
+      }
+    }
+
+    &--right {
+      margin-left: -10.41vw;
+      width: 39.9166vw;
+
+      @include tablet {
+        margin-top: -15px;
+        margin-left: -12.41vw;
+        width: 45.25vw;
+      }
+
+      @include mobile {
+        width: 71.25vw;
+      }
+    }
+  }
+}

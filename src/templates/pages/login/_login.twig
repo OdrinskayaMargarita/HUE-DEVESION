@@ -1,0 +1,37 @@
+<section class="login">
+    <div class="login__wrapper">
+        <div class="login__form">
+            <div class="login__title">
+                {{ titles.title("Welcome back", "login", "xxs", "dark", "h4") }}
+                <p>Please login to continue.</p>
+                <p class="new-pass">We've sent you an email with a link to update your password.</p>
+            </div>
+            <form class="form-theme form-theme--contacts form-valid">
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" data-input="email" class="input-required">
+                    </div>
+                    <span class="txt-error">It looks like you haven’t entered a valid email address - please try again</span>
+{#                    <span class="txt-error">This email address is already taken</span>#}
+                </div>
+                <div class="form-theme__item form-theme__field">
+                    <div class="field-wrap">
+                        <label for="pass">Your Password</label>
+                        <input id="pass" type="password" data-input="password" class="input-required">
+                    </div>
+                    <span class="txt-error txt-error-short">Please enter at least 6 characters</span>
+                </div>
+                <button type="submit" class="button button--black">
+                    <span data-splitting>Sign in</span>
+                    <span data-splitting>Sign in</span>
+                </button>
+            </form>
+            <a href="forgot-pass.html" class="forgot-pass">Forgot Password?</a>
+            <div class="login__signup"><p>Don’t have an account?</p> <a href="registration.html">Sign up</a></div>
+        </div>
+    </div>
+    <div class="login__img">
+        <img src="./img/loginpage/login.jpg">
+    </div>
+</section>

@@ -1,0 +1,172 @@
+<header class="header js-header" id="header" style="--headerTextColor:#000000">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__inner-left">
+                <a href="/" class="header__logo">
+                    <span class="logo-link">{{ icons.icon('nuhu-logo-black') }}</span>
+                </a>
+                <nav class="header__nav" id="header__nav">
+                    <a href="javascript:void(0)" class="header__nav--close" id="header__nav--close">
+                        {{ icons.icon('close') }}
+                    </a>
+                    <ul class="nav">
+                        <li class="nav__item js-has-submenu" data-submenu="submenu-shop">
+                            <a class="item-link js-has-submenu-link has-submenu"
+                               href="#">SHOP
+                                {{ icons.icon('arrow') }}
+                            </a>
+                            <div id="submenu-shop" class="submenu js-submenu">
+                                <div class="submenu__wrapper">
+                                    <div class="submenu__lists submenu-lists">
+                                        {% for item in data.submenuShop %}
+                                            <div class="submenu-lists__item submenu-list {{ item.className }}">
+                                                <div class="submenu-list__name animated">{{ item.name }}</div>
+                                                <ul class="submenu-nav">
+                                                    {% for subitem in item.items %}
+                                                        <li class="submenu-nav__item animated">
+                                                            <a class="submenu-nav__link {% if subitem.img %}js-has-img{% endif %}" href="{{ subitem.href }}" {% if subitem.img %}data-img="img/navigation{{ subitem.img }}"{% endif %}>
+                                                                {% if subitem.color %}<span class="icon icon_color" style="background-color: {{ subitem.color }}"></span>{% endif %}
+                                                                <span class="name">{{ subitem.name }}</span>
+                                                            </a>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="submenu__media">
+                                        <div class="submenu__img js-img">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav__item js-has-submenu"  data-submenu="submenu-about">
+                            <a class="item-link js-has-submenu-link has-submenu"
+                               href="#">About Us
+                                {{ icons.icon('arrow') }}
+                            </a>
+                            <div id="submenu-about" class="submenu js-submenu">
+                                <div class="submenu__wrapper">
+                                    <div class="submenu__list">
+                                        <ul class="submenu-list {% if data.submenuAbout.length < 4 %}has-less{% endif %}">
+                                            {% for item in data.submenuAbout %}
+                                                <li class="submenu-list__item animated">
+                                                    <a href="{{ item.href }}" class="submenu-list__link">
+                                                        <span class="submenu-list__img">
+                                                            <img src="img/navigation{{ item.img }}" alt="{{ item.name }}">
+                                                        </span>
+                                                        <span class="submenu-list__name">
+                                                            {{ item.name }}
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav__item">
+                            <a class="item-link" href="#">Lookbook </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="item-link" href="/blog.html">Media </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="item-link" href="#">NY Colour Map 2021</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__buttons">
+                <ul>
+                    <li id="open-search">
+                        <a href="#">
+                            {{ icons.icon('search') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {{ icons.icon('heart') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="open-basketMenu">
+                            {{ icons.icon('bug') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {{ icons.icon('personal') }}
+                        </a>
+                    </li>
+                    <li class="header__burger">
+                        <a href="#" id="header__burger">
+                            {{ icons.icon('burger') }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header__search">
+        <div class="container">
+            <div class="header__search-inner">
+                <form>
+                    <div class="header__search-block">
+                        <input class="header__search-input" type="text" placeholder="What are you looking for?"
+                               id="input-search">
+                        <button class="header__search-button">
+                            <svg class="icon icon_item--search">
+                                <use xlink:href="img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="header__search-close js-hovered" id="close-search">
+                    <svg class="icon icon_item--close">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__search-result">
+        <div class="container">
+            <div class="header__search-result__inner">
+                <div class="search-result__item">
+                    <a href="#"></a>
+                    <div class="search-result__item-img">
+                        <img src="/img/clothes1.jpg" alt="img">
+                    </div>
+                    <div class="header__search-result__item-title">
+                        <p class="search-result__item-name">Illuminating Yellow Organic & Recycled Cotton Hoodie</p>
+                        <p class="search-result__item-price">$129</p>
+                    </div>
+                </div>
+                <div class="search-result__item">
+                    <a href="#"></a>
+                    <div class="search-result__item-img">
+                        <img src="/img/clothes1.jpg" alt="img">
+                    </div>
+                    <div class="header__search-result__item-title">
+                        <p class="search-result__item-name">Illuminating Yellow Organic & Recycled Cotton Hoodie</p>
+                        <p class="search-result__item-price">$129</p>
+                    </div>
+                </div>
+                <div class="search-result__item">
+                    <a href="#"></a>
+                    <div class="search-result__item-img">
+                        <img src="/img/clothes1.jpg" alt="img">
+                    </div>
+                    <div class="header__search-result__item-title">
+                        <p class="search-result__item-name">Illuminating Yellow Organic & Recycled Cotton Hoodie</p>
+                        <p class="search-result__item-price">$129</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

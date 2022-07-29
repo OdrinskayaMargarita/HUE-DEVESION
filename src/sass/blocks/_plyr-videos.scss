@@ -1,0 +1,282 @@
+// plyr
+:root {
+  --plyr-color-main: transparent;
+}
+
+.no-touch .hero {
+  .plyr {
+    &.plyr--playing {
+      .plyr__controls__item[data-plyr="play"],
+      .plyr__control[data-plyr="play"] {
+        &:hover {
+          .icon--pressed {
+            opacity: 1;
+          }
+        }
+
+        .icon--pressed {
+          opacity: 0;
+          transition: opacity 300ms ease;
+        }
+      }
+    }
+  }
+}
+
+.touch .hero {
+  .plyr {
+    &.plyr--playing {
+      .plyr__controls__item[data-plyr="play"],
+      .plyr__control[data-plyr="play"] {
+        .icon--pressed {
+          opacity: 0;
+          transition: opacity 300ms ease;
+        }
+      }
+    }
+  }
+}
+
+.plyr {
+  $plyr: &;
+
+  audio, video {
+    object-fit: cover;
+  }
+
+  iframe {
+    object-fit: unset !important;
+  }
+
+  &__poster {
+    background-size: cover;
+  }
+
+  &.plyr--playing,
+  &.plyr--paused {
+    .plyr__progress__custom-thumb {
+      opacity: 1;
+    }
+  }
+
+  &.plyr--stopped,
+  &.plyr--ended, {
+    .plyr__progress__custom-thumb {
+      opacity: 0;
+    }
+  }
+
+  &--video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__video-wrapper {
+    margin: 0;
+    height: 100%;
+  }
+
+  &__video-embed,
+  &__video-wrapper--fixed-ratio {
+    aspect-ratio: unset !important;
+    height: 100%;
+
+    iframe,
+    video {
+      top: 50%;
+      left: 50%;
+      width: 500%;
+      transform: translate(-50%, -50%);
+
+      @include mobile {
+        width: 390%;
+      }
+    }
+
+    video {
+      height: 100%;
+    }
+
+    iframe {
+      height: 180%;
+    }
+  }
+
+  &--full-ui {
+    .plyr__video-embed>.plyr__video-embed__container {
+      position: unset !important;
+      transform: unset !important;
+      padding-bottom: 0;
+      height: 100%;
+    }
+  }
+
+  // controls
+  &__controls {
+    margin: 0;
+    padding: 0 !important;
+    position: unset !important;
+  }
+
+  &__controls__item[data-plyr="play"],
+  &__control[data-plyr="play"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+
+    .modal & {
+      top: auto;
+      bottom: 35px;
+      left: 40px;
+      transform: none;
+    }
+  }
+
+  &__fullscreen {
+    position: absolute;
+    right: 24px;
+    bottom: 19px;
+    background-color: transparent;
+
+    .modal & {
+      display: none;
+    }
+
+    .icon_expand {
+      fill: none !important;
+      stroke: $c-white;
+      stroke-width: 1px;
+      pointer-events: none;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    bottom: 33px;
+    left: 24px;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 106px);
+    overflow: hidden;
+
+    .media-wrap:not(.has-fullscreen) & {
+      width: calc(100% - 48px);
+    }
+
+    .modal .media-wrap & {
+      bottom: 48px;
+      left: 89px;
+      width: calc(100% - 130px);
+    }
+
+    &::before {
+      @include pseudo();
+      width: 100%;
+      top: calc(50% - .5px);
+      left: 0;
+      height: 1px;
+      background-color: $c-white;
+      pointer-events: none;
+    }
+
+    &__input-wrap,
+    &__input {
+      height: 6px !important;
+    }
+
+    &__input,
+    &__buffer {
+      opacity: 0;
+    }
+
+    &__custom-thumb {
+      position: absolute;
+      top: 0;
+      height: 6px;
+      display: flex;
+      transform: translateX(-50%);
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.about-section,
+.section-item,
+.modal-video {
+  .media-wrap {
+    position: relative;
+    height: 0;
+    padding-bottom: 131.24%;
+    overflow: hidden;
+
+    img,
+    video,
+    iframe {
+      position: absolute;
+      height: 130%;
+    }
+
+    img,
+    video {
+      object-fit: cover;
+    }
+
+    iframe {
+      object-fit: unset !important;
+    }
+
+    img,
+    video {
+      width: 100%;
+    }
+
+    iframe {
+      //width: 240%;
+      width: 320%;
+
+      //@include tablet {
+      //  width: 320%;
+      //}
+
+      @include mobile {
+        width: 370%;
+      }
+    }
+
+    .plyr__progress {
+      width: 82%;
+      left: 90px;
+
+      @include mobile{
+        width: 75%;
+        left: 80px;
+      }
+    }
+
+    .plyr__control[aria-label="Pause"] {
+      left: 40px;
+      bottom: 5px;
+      top: auto;
+    }
+
+    .plyr__control[aria-label="Play"] {
+      width: 48px;
+      height: 48px;
+      background: url("../img/play--inner-pages.svg") no-repeat center;
+      background-size: 100%;
+      transition: none !important;
+      left: 40px;
+      bottom: -10px;
+      top: auto;
+
+      svg {
+        opacity: 0;
+      }
+    }
+  }
+}

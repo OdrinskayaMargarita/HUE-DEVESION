@@ -1,0 +1,59 @@
+.terms-banners {
+  width: 100%;
+
+  &__list {
+    width: 100%;
+  }
+
+  .terms-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .term {
+    padding: 49px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include tablet  {
+      padding: 49px 15px 48px;
+    }
+
+    @include mobile  {
+      padding: 49px 27px;
+    }
+
+    &__title,
+    &__text {
+      max-width: 18.2639vw;
+
+      @include laptop {
+        max-width: 263px;
+      }
+
+      @include tablet {
+        max-width: 247px;
+      }
+
+      @include mobile {
+        max-width: 315px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+}

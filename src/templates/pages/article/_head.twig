@@ -1,0 +1,12 @@
+{% import "data/_data-article.twig" as dataArticle %}
+{% import "mixins/_button-back.twig" as back %}
+
+<div class="article__head article-head">
+    <div class="article-head__wrapper">
+        {{ back.buttonBack('Go back', 'article-head') }}
+        {{ titles.title(dataArticle.article.title, "article-head", "s", "light", "h1") }}
+        <div class="article-head__img">
+            {{ images.image("", dataArticle.article.thumb, dataArticle.article.title) }}
+        </div>
+    </div>
+</div>
